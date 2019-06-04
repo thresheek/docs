@@ -23,9 +23,6 @@ WARNING:
 -	[`7.3.6-cli-alpine3.9`, `7.3-cli-alpine3.9`, `7-cli-alpine3.9`, `cli-alpine3.9`, `7.3.6-alpine3.9`, `7.3-alpine3.9`, `7-alpine3.9`, `alpine3.9`, `7.3.6-cli-alpine`, `7.3-cli-alpine`, `7-cli-alpine`, `cli-alpine`, `7.3.6-alpine`, `7.3-alpine`, `7-alpine`, `alpine` (*7.3/alpine3.9/cli/Dockerfile*)](https://github.com/docker-library/php/blob/8203d502a18ecfe79ac011f85843754fb524b899/7.3/alpine3.9/cli/Dockerfile)
 -	[`7.3.6-fpm-alpine3.9`, `7.3-fpm-alpine3.9`, `7-fpm-alpine3.9`, `fpm-alpine3.9`, `7.3.6-fpm-alpine`, `7.3-fpm-alpine`, `7-fpm-alpine`, `fpm-alpine` (*7.3/alpine3.9/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/8203d502a18ecfe79ac011f85843754fb524b899/7.3/alpine3.9/fpm/Dockerfile)
 -	[`7.3.6-zts-alpine3.9`, `7.3-zts-alpine3.9`, `7-zts-alpine3.9`, `zts-alpine3.9`, `7.3.6-zts-alpine`, `7.3-zts-alpine`, `7-zts-alpine`, `zts-alpine` (*7.3/alpine3.9/zts/Dockerfile*)](https://github.com/docker-library/php/blob/8203d502a18ecfe79ac011f85843754fb524b899/7.3/alpine3.9/zts/Dockerfile)
--	[`7.3.6-cli-alpine3.8`, `7.3-cli-alpine3.8`, `7-cli-alpine3.8`, `cli-alpine3.8`, `7.3.6-alpine3.8`, `7.3-alpine3.8`, `7-alpine3.8`, `alpine3.8` (*7.3/alpine3.8/cli/Dockerfile*)](https://github.com/docker-library/php/blob/8203d502a18ecfe79ac011f85843754fb524b899/7.3/alpine3.8/cli/Dockerfile)
--	[`7.3.6-fpm-alpine3.8`, `7.3-fpm-alpine3.8`, `7-fpm-alpine3.8`, `fpm-alpine3.8` (*7.3/alpine3.8/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/8203d502a18ecfe79ac011f85843754fb524b899/7.3/alpine3.8/fpm/Dockerfile)
--	[`7.3.6-zts-alpine3.8`, `7.3-zts-alpine3.8`, `7-zts-alpine3.8`, `zts-alpine3.8` (*7.3/alpine3.8/zts/Dockerfile*)](https://github.com/docker-library/php/blob/8203d502a18ecfe79ac011f85843754fb524b899/7.3/alpine3.8/zts/Dockerfile)
 -	[`7.2.19-cli-stretch`, `7.2-cli-stretch`, `7.2.19-stretch`, `7.2-stretch`, `7.2.19-cli`, `7.2-cli`, `7.2.19`, `7.2` (*7.2/stretch/cli/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/stretch/cli/Dockerfile)
 -	[`7.2.19-apache-stretch`, `7.2-apache-stretch`, `7.2.19-apache`, `7.2-apache` (*7.2/stretch/apache/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/stretch/apache/Dockerfile)
 -	[`7.2.19-fpm-stretch`, `7.2-fpm-stretch`, `7.2.19-fpm`, `7.2-fpm` (*7.2/stretch/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/stretch/fpm/Dockerfile)
@@ -33,9 +30,6 @@ WARNING:
 -	[`7.2.19-cli-alpine3.9`, `7.2-cli-alpine3.9`, `7.2.19-alpine3.9`, `7.2-alpine3.9`, `7.2.19-cli-alpine`, `7.2-cli-alpine`, `7.2.19-alpine`, `7.2-alpine` (*7.2/alpine3.9/cli/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/alpine3.9/cli/Dockerfile)
 -	[`7.2.19-fpm-alpine3.9`, `7.2-fpm-alpine3.9`, `7.2.19-fpm-alpine`, `7.2-fpm-alpine` (*7.2/alpine3.9/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/alpine3.9/fpm/Dockerfile)
 -	[`7.2.19-zts-alpine3.9`, `7.2-zts-alpine3.9`, `7.2.19-zts-alpine`, `7.2-zts-alpine` (*7.2/alpine3.9/zts/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/alpine3.9/zts/Dockerfile)
--	[`7.2.19-cli-alpine3.8`, `7.2-cli-alpine3.8`, `7.2.19-alpine3.8`, `7.2-alpine3.8` (*7.2/alpine3.8/cli/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/alpine3.8/cli/Dockerfile)
--	[`7.2.19-fpm-alpine3.8`, `7.2-fpm-alpine3.8` (*7.2/alpine3.8/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/alpine3.8/fpm/Dockerfile)
--	[`7.2.19-zts-alpine3.8`, `7.2-zts-alpine3.8` (*7.2/alpine3.8/zts/Dockerfile*)](https://github.com/docker-library/php/blob/fa29b56ad42282d58e10f5e449be45e8d905cfe6/7.2/alpine3.8/zts/Dockerfile)
 -	[`7.1.30-cli-stretch`, `7.1-cli-stretch`, `7.1.30-stretch`, `7.1-stretch`, `7.1.30-cli`, `7.1-cli`, `7.1.30`, `7.1` (*7.1/stretch/cli/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/stretch/cli/Dockerfile)
 -	[`7.1.30-apache-stretch`, `7.1-apache-stretch`, `7.1.30-apache`, `7.1-apache` (*7.1/stretch/apache/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/stretch/apache/Dockerfile)
 -	[`7.1.30-fpm-stretch`, `7.1-fpm-stretch`, `7.1.30-fpm`, `7.1-fpm` (*7.1/stretch/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/stretch/fpm/Dockerfile)
@@ -47,9 +41,8 @@ WARNING:
 -	[`7.1.30-cli-alpine3.9`, `7.1-cli-alpine3.9`, `7.1.30-alpine3.9`, `7.1-alpine3.9`, `7.1.30-cli-alpine`, `7.1-cli-alpine`, `7.1.30-alpine`, `7.1-alpine` (*7.1/alpine3.9/cli/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/alpine3.9/cli/Dockerfile)
 -	[`7.1.30-fpm-alpine3.9`, `7.1-fpm-alpine3.9`, `7.1.30-fpm-alpine`, `7.1-fpm-alpine` (*7.1/alpine3.9/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/alpine3.9/fpm/Dockerfile)
 -	[`7.1.30-zts-alpine3.9`, `7.1-zts-alpine3.9`, `7.1.30-zts-alpine`, `7.1-zts-alpine` (*7.1/alpine3.9/zts/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/alpine3.9/zts/Dockerfile)
--	[`7.1.30-cli-alpine3.8`, `7.1-cli-alpine3.8`, `7.1.30-alpine3.8`, `7.1-alpine3.8` (*7.1/alpine3.8/cli/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/alpine3.8/cli/Dockerfile)
--	[`7.1.30-fpm-alpine3.8`, `7.1-fpm-alpine3.8` (*7.1/alpine3.8/fpm/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/alpine3.8/fpm/Dockerfile)
--	[`7.1.30-zts-alpine3.8`, `7.1-zts-alpine3.8` (*7.1/alpine3.8/zts/Dockerfile*)](https://github.com/docker-library/php/blob/68f7e2d97abd53be373c925c2f040b2db2439d01/7.1/alpine3.8/zts/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/php/badge/icon) (`arm32v7/php` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/php/)
 
 # Quick reference
 
@@ -92,7 +85,7 @@ PHP is a server-side scripting language designed for web development, but which 
 ### Create a `Dockerfile` in your PHP project
 
 ```dockerfile
-FROM php:7.2-cli
+FROM arm32v7/php:7.2-cli
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 CMD [ "php", "./your-script.php" ]
@@ -110,7 +103,7 @@ $ docker run -it --rm --name my-running-app my-php-app
 For many simple, single file projects, you may find it inconvenient to write a complete `Dockerfile`. In such cases, you can run a PHP script by using the PHP Docker image directly:
 
 ```console
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.2-cli php your-script.php
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp arm32v7/php:7.2-cli php your-script.php
 ```
 
 ## How to install more PHP extensions
@@ -122,7 +115,7 @@ We provide the helper scripts `docker-php-ext-configure`, `docker-php-ext-instal
 In order to keep the images smaller, PHP's source is kept in a compressed tar file. To facilitate linking of PHP's source with any extension, we also provide the helper script `docker-php-source` to easily extract the tar or delete the extracted source. Note: if you do use `docker-php-source` to extract the source, be sure to delete it in the same layer of the docker image.
 
 ```Dockerfile
-FROM php:7.2-cli
+FROM arm32v7/php:7.2-cli
 RUN docker-php-source extract \
 	# do important things \
 	&& docker-php-source delete
@@ -133,7 +126,7 @@ RUN docker-php-source extract \
 For example, if you want to have a PHP-FPM image with `iconv` and `gd` extensions, you can inherit the base image that you like, and write your own `Dockerfile` like this:
 
 ```dockerfile
-FROM php:7.2-fpm
+FROM arm32v7/php:7.2-fpm
 RUN apt-get update && apt-get install -y \
 		libfreetype6-dev \
 		libjpeg62-turbo-dev \
@@ -152,14 +145,14 @@ See ["Dockerizing Compiled Software"](https://tianon.xyz/post/2017/12/26/dockeri
 Some extensions are not provided with the PHP source, but are instead available through [PECL](https://pecl.php.net/). To install a PECL extension, use `pecl install` to download and compile it, then use `docker-php-ext-enable` to enable it:
 
 ```dockerfile
-FROM php:7.2-cli
+FROM arm32v7/php:7.2-cli
 RUN pecl install redis-4.0.1 \
 	&& pecl install xdebug-2.6.0 \
 	&& docker-php-ext-enable redis xdebug
 ```
 
 ```dockerfile
-FROM php:5.6-cli
+FROM arm32v7/php:5.6-cli
 RUN apt-get update && apt-get install -y libmemcached-dev zlib1g-dev \
 	&& pecl install memcached-2.2.0 \
 	&& docker-php-ext-enable memcached
@@ -178,7 +171,7 @@ Unlike PHP core extensions, PECL extensions should be installed in series to fai
 Some extensions are not provided via either Core or PECL; these can be installed too, although the process is less automated:
 
 ```dockerfile
-FROM php:5.6-cli
+FROM arm32v7/php:5.6-cli
 RUN curl -fsSL 'https://xcache.lighttpd.net/pub/Releases/3.2.0/xcache-3.2.0.tar.gz' -o xcache.tar.gz \
 	&& mkdir -p xcache \
 	&& tar -xf xcache.tar.gz -C xcache --strip-components=1 \
@@ -197,7 +190,7 @@ RUN curl -fsSL 'https://xcache.lighttpd.net/pub/Releases/3.2.0/xcache-3.2.0.tar.
 The `docker-php-ext-*` scripts *can* accept an arbitrary path, but it must be absolute (to disambiguate from built-in extension names), so the above example could also be written as the following:
 
 ```dockerfile
-FROM php:5.6-cli
+FROM arm32v7/php:5.6-cli
 RUN curl -fsSL 'https://xcache.lighttpd.net/pub/Releases/3.2.0/xcache-3.2.0.tar.gz' -o xcache.tar.gz \
 	&& mkdir -p /tmp/xcache \
 	&& tar -xf xcache.tar.gz -C /tmp/xcache --strip-components=1 \
@@ -240,7 +233,7 @@ The default config can be customized by copying configuration files into the `$P
 ### Example
 
 ```dockerfile
-FROM php:7.2-fpm-alpine
+FROM arm32v7/php:7.2-fpm-alpine
 
 # Use the default production configuration
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
@@ -251,26 +244,26 @@ COPY config/opcache.ini $PHP_INI_DIR/conf.d/
 
 # Image Variants
 
-The `php` images come in many flavors, each designed for a specific use case.
+The `arm32v7/php` images come in many flavors, each designed for a specific use case.
 
 Some of these tags may have names like jessie or stretch in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on.
 
-## `php:<version>-cli`
+## `arm32v7/php:<version>-cli`
 
 This variant contains the [PHP CLI](https://secure.php.net/manual/en/features.commandline.php) tool with default mods. If you need a web server, this is probably not the image you are looking for. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as a base from which to build other images.
 
 It also is the only variant which contains the (not recommended) `php-cgi` binary, which is likely necessary for some things like [PPM](https://github.com/php-pm/php-pm).
 
-Note that *all* variants of `php` contain the PHP CLI (`/usr/local/bin/php`).
+Note that *all* variants of `arm32v7/php` contain the PHP CLI (`/usr/local/bin/php`).
 
-## `php:<version>-apache`
+## `arm32v7/php:<version>-apache`
 
 This image contains Debian's Apache httpd in conjunction with PHP (as `mod_php`) and uses `mpm_prefork` by default.
 
 ### Apache with a `Dockerfile`
 
 ```dockerfile
-FROM php:7.2-apache
+FROM arm32v7/php:7.2-apache
 COPY src/ /var/www/html/
 ```
 
@@ -286,7 +279,7 @@ We recommend that you add a `php.ini` configuration file; see the "Configuration
 ### Apache without a `Dockerfile`
 
 ```console
-$ docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.2-apache
+$ docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html arm32v7/php:7.2-apache
 ```
 
 ### Changing `DocumentRoot` (or other Apache configuration)
@@ -294,7 +287,7 @@ $ docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.
 Some applications may wish to change the default `DocumentRoot` in Apache (away from `/var/www/html`). The following demonstrates one way to do so using an environment variable (which can then be modified at container runtime as well):
 
 ```dockerfile
-FROM php:7.1-apache
+FROM arm32v7/php:7.1-apache
 
 ENV APACHE_DOCUMENT_ROOT /path/to/new/root
 
@@ -304,7 +297,7 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 
 A similar technique could be employed for other Apache configuration options.
 
-## `php:<version>-fpm`
+## `arm32v7/php:<version>-fpm`
 
 This variant contains PHP-FPM, which is a FastCGI implementation for PHP. See [the PHP-FPM website](https://php-fpm.org/) for more information about PHP-FPM.
 
@@ -318,7 +311,7 @@ Some potentially helpful resources:
 -	[Stack Overflow discussion](https://stackoverflow.com/q/29905953/433558)
 -	[Apache httpd Wiki example](https://wiki.apache.org/httpd/PHPFPMWordpress)
 
-## `php:<version>-alpine`
+## `arm32v7/php:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

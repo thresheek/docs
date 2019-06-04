@@ -16,33 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`kernel`, `kernel-java8-ibm` (*official/kernel/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/kernel/java8/ibmjava/Dockerfile)
--	[`kernel-java8-ibmsfj` (*official/kernel/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/kernel/java8/ibmsfj/Dockerfile)
--	[`kernel-java11` (*official/kernel/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/kernel/java11/openj9/Dockerfile)
--	[`webProfile8`, `webProfile8-java8-ibm` (*official/webProfile8/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/webProfile8/java8/ibmjava/Dockerfile)
--	[`webProfile8-java8-ibmsfj` (*official/webProfile8/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/webProfile8/java8/ibmsfj/Dockerfile)
--	[`webProfile8-java11` (*official/webProfile8/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/webProfile8/java11/openj9/Dockerfile)
--	[`javaee8`, `javaee8-java8-ibm`, `latest` (*official/javaee8/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/javaee8/java8/ibmjava/Dockerfile)
--	[`javaee8-java8-ibmsfj` (*official/javaee8/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/javaee8/java8/ibmsfj/Dockerfile)
--	[`javaee8-java11` (*official/javaee8/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/javaee8/java11/openj9/Dockerfile)
--	[`microProfile1`, `microProfile1-java8-ibm` (*official/microProfile1/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/microProfile1/java8/ibmjava/Dockerfile)
--	[`microProfile1-java8-ibmsfj` (*official/microProfile1/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/microProfile1/java8/ibmsfj/Dockerfile)
--	[`microProfile1-java11` (*official/microProfile1/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/microProfile1/java11/openj9/Dockerfile)
--	[`microProfile2`, `microProfile2-java8-ibm` (*official/microProfile2/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/microProfile2/java8/ibmjava/Dockerfile)
--	[`microProfile2-java8-ibmsfj` (*official/microProfile2/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/microProfile2/java8/ibmsfj/Dockerfile)
--	[`microProfile2-java11` (*official/microProfile2/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/microProfile2/java11/openj9/Dockerfile)
--	[`springBoot2`, `springBoot2-java8-ibm` (*official/springBoot2/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot2/java8/ibmjava/Dockerfile)
--	[`springBoot2-java8-ibmsfj` (*official/springBoot2/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot2/java8/ibmsfj/Dockerfile)
--	[`springBoot2-java11` (*official/springBoot2/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot2/java11/openj9/Dockerfile)
--	[`webProfile7`, `webProfile7-java8-ibm` (*official/webProfile7/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/webProfile7/java8/ibmjava/Dockerfile)
--	[`webProfile7-java8-ibmsfj` (*official/webProfile7/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/webProfile7/java8/ibmsfj/Dockerfile)
--	[`webProfile7-java11` (*official/webProfile7/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/webProfile7/java11/openj9/Dockerfile)
--	[`javaee7`, `javaee7-java8-ibm` (*official/javaee7/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/javaee7/java8/ibmjava/Dockerfile)
--	[`javaee7-java8-ibmsfj` (*official/javaee7/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/javaee7/java8/ibmsfj/Dockerfile)
--	[`javaee7-java11` (*official/javaee7/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/javaee7/java11/openj9/Dockerfile)
--	[`springBoot1`, `springBoot1-java8-ibm` (*official/springBoot1/java8/ibmjava/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot1/java8/ibmjava/Dockerfile)
--	[`springBoot1-java8-ibmsfj` (*official/springBoot1/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot1/java8/ibmsfj/Dockerfile)
--	[`springBoot1-java11` (*official/springBoot1/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot1/java11/openj9/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `open-liberty` does not support the currently selected architecture (`arm32v7`).
 
 # Quick reference
 
@@ -124,7 +100,7 @@ There are multiple tags available in this repository.
 The `kernel` image contains the Liberty kernel and can be used as the basis for custom built images that contain only the features required for a specific application. For example, the following Dockerfile starts with this image, copies in the `server.xml` that lists the features required by the application.
 
 ```dockerfile
-FROM open-liberty:kernel
+FROM arm32v7/open-liberty:kernel
 COPY --chown=1001:0  Sample1.war /config/dropins/
 COPY --chown=1001:0  server.xml /config/
 ```
@@ -160,7 +136,7 @@ When using `volumes`, an application file can be mounted in the `dropins` direct
 ```console
 $ docker run -d -p 80:9080 -p 443:9443 \
 	    -v /tmp/DefaultServletEngine/dropins/Sample1.war:/config/dropins/Sample1.war \
-	    open-liberty:webProfile8
+	    arm32v7/open-liberty:webProfile8
 ```
 
 When the server is started, you can browse to http://localhost/Sample1/SimpleServlet on the Docker host.
@@ -172,7 +148,7 @@ For greater flexibility over configuration, it is possible to mount an entire se
 	```console
 	$ docker run -d -p 80:9080 \
 	  -v /tmp/DefaultServletEngine:/config \
-	  open-liberty:webProfile8
+	  arm32v7/open-liberty:webProfile8
 	```
 
 # Using `springBoot` images
@@ -182,7 +158,7 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 1.	A Spring Boot application JAR deploys to the `dropins/spring` directory within the default server configuration, not the `dropins` directory. Liberty allows one Spring Boot application per server configuration. You can create a Spring Boot application layer over this image by adding the application JAR to the `dropins/spring` directory. In this example we copied `hellospringboot.jar` from `/tmp` to the same directory containing the following Dockerfile.
 
 	```dockerfile
-	FROM open-liberty:springBoot2
+	FROM arm32v7/open-liberty:springBoot2
 	COPY --chown=1001:0 hellospringboot.jar /config/dropins/spring/
 	```
 
@@ -198,13 +174,13 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 	You can use the `springBootUtility` command to create thin application and library cache layers over a `springBoot` image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache.
 
 	```dockerfile
-	FROM open-liberty:springBoot2 as staging
+	FROM arm32v7/open-liberty:springBoot2 as staging
 	COPY --chown=1001:0 hellospringboot.jar /staging/myFatApp.jar
 	RUN springBootUtility thin \
 	   --sourceAppPath=/staging/myFatApp.jar \
 	   --targetThinAppPath=/staging/myThinApp.jar \
 	   --targetLibCachePath=/staging/lib.index.cache
-	FROM open-liberty:springBoot2
+	FROM arm32v7/open-liberty:springBoot2
 	COPY --from=staging /staging/lib.index.cache /lib.index.cache
 	COPY --from=staging /staging/myThinApp.jar /config/dropins/spring/myThinApp.jar
 	```
@@ -242,7 +218,7 @@ Or, create a named data volume container that exposes a volume at the location o
 
 ```console
 docker run -v /opt/ol/wlp//output/.classCache \
-    --name classcache open-liberty true
+    --name classcache arm32v7/open-liberty true
 ```
 
 Then, run the Open Liberty image with the volumes from the data volume container classcache mounted as follows:
@@ -258,7 +234,7 @@ Liberty writes to two different directories when running: `/opt/ol/wlp//output` 
 ```console
 docker run -d -p 80:9080 -p 443:9443 \
     --tmpfs /opt/ol/wlp//output --tmpfs /logs -v /config --read-only \
-    open-liberty:webProfile8
+    arm32v7/open-liberty:webProfile8
 ```
 
 # Relationship between Open Liberty and WebSphere Liberty

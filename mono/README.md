@@ -21,6 +21,8 @@ WARNING:
 -	[`5.18.1.3`, `5.18.1`, `5.18` (*5.18.1.3/Dockerfile*)](https://github.com/mono/docker/blob/43bc89890efbb96e059cda9f690ba13c9ae8e386/5.18.1.3/Dockerfile)
 -	[`5.18.1.3-slim`, `5.18.1-slim`, `5.18-slim` (*5.18.1.3/slim/Dockerfile*)](https://github.com/mono/docker/blob/bbd1369006147ff0c2363897d0e651f2efed29b0/5.18.1.3/slim/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/mono/badge/icon) (`arm32v7/mono` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/mono/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -67,7 +69,7 @@ This image will run stand-alone Mono console apps.
 This example Dockerfile will run an executable called `TestingConsoleApp.exe`.
 
 ```dockerfile
-FROM mono:3.10-onbuild
+FROM arm32v7/mono:3.10-onbuild
 CMD [ "mono",  "./TestingConsoleApp.exe" ]
 ```
 
@@ -92,15 +94,15 @@ Thanks to [Michael Friis](http://friism.com/) for his preliminary work.
 
 # Image Variants
 
-The `mono` images come in many flavors, each designed for a specific use case.
+The `arm32v7/mono` images come in many flavors, each designed for a specific use case.
 
-## `mono:<version>`
+## `arm32v7/mono:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `mono:<version>-slim`
+## `arm32v7/mono:<version>-slim`
 
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `mono`. Unless you are working in an environment where *only* the `mono` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `arm32v7/mono`. Unless you are working in an environment where *only* the `arm32v7/mono` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 

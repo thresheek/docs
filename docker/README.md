@@ -16,15 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`19.03.0-beta5`, `19.03-rc`, `rc`, `test` (*19.03-rc/Dockerfile*)](https://github.com/docker-library/docker/blob/3d316f5dbf349eb1d04c5d24f4794dc68570c45e/19.03-rc/Dockerfile)
--	[`19.03.0-beta5-dind`, `19.03-rc-dind`, `rc-dind`, `test-dind` (*19.03-rc/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/27471a8b93e980bd4c51464ee933ed90fd36bf97/19.03-rc/dind/Dockerfile)
--	[`19.03.0-beta5-git`, `19.03-rc-git`, `rc-git`, `test-git` (*19.03-rc/git/Dockerfile*)](https://github.com/docker-library/docker/blob/98ffef81ebfa7601a9ed2f0bf56d78f426bf253c/19.03-rc/git/Dockerfile)
--	[`18.09.6`, `18.09`, `18`, `stable`, `latest` (*18.09/Dockerfile*)](https://github.com/docker-library/docker/blob/9633df3ae8a88dfed9ba7f92e8a911249bbe4ec0/18.09/Dockerfile)
--	[`18.09.6-dind`, `18.09-dind`, `18-dind`, `stable-dind`, `dind` (*18.09/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/27471a8b93e980bd4c51464ee933ed90fd36bf97/18.09/dind/Dockerfile)
--	[`18.09.6-git`, `18.09-git`, `18-git`, `stable-git`, `git` (*18.09/git/Dockerfile*)](https://github.com/docker-library/docker/blob/91bbc4f7b06c06020d811dafb2266bcd7cf6c06d/18.09/git/Dockerfile)
--	[`18.06.3-ce`, `18.06.3`, `18.06`, `edge` (*18.06/Dockerfile*)](https://github.com/docker-library/docker/blob/0ea1769704a07017fd9a876590de2feb434d33e2/18.06/Dockerfile)
--	[`18.06.3-ce-dind`, `18.06.3-dind`, `18.06-dind`, `edge-dind` (*18.06/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/27471a8b93e980bd4c51464ee933ed90fd36bf97/18.06/dind/Dockerfile)
--	[`18.06.3-ce-git`, `18.06.3-git`, `18.06-git`, `edge-git` (*18.06/git/Dockerfile*)](https://github.com/docker-library/docker/blob/595ad0c92090937dcb7c200900fb97e36d36c412/18.06/git/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `docker` does not support the currently selected architecture (`arm32v7`).
 
 # Quick reference
 
@@ -75,7 +69,7 @@ If you are still convinced that you need Docker-in-Docker and not just access to
 ## Start a daemon instance
 
 ```console
-$ docker run --privileged --name some-docker -d docker:dind
+$ docker run --privileged --name some-docker -d arm32v7/docker:dind
 ```
 
 **Note:** `--privileged` is required for Docker-in-Docker to function properly, but it should be used with care as it provides full access to the host environment, as explained [in the relevant section of the Docker documentation](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
@@ -85,7 +79,7 @@ By default, the `dind` variants of this image add `--host=tcp://0.0.0.0:2375` (o
 ## Connect to it from a second container
 
 ```console
-$ docker run --rm --link some-docker:docker docker:edge version
+$ docker run --rm --link some-docker:docker arm32v7/docker:edge version
 Client:
  Version:      17.05.0-ce
  API version:  1.27 (downgraded from 1.29)
@@ -105,7 +99,7 @@ Server:
 ```
 
 ```console
-$ docker run -it --rm --link some-docker:docker docker:edge sh
+$ docker run -it --rm --link some-docker:docker arm32v7/docker:edge sh
 / # docker version
 Client:
  Version:      17.05.0-ce
@@ -126,7 +120,7 @@ Server:
 ```
 
 ```console
-$ docker run --rm --link some-docker:docker docker info
+$ docker run --rm --link some-docker:docker arm32v7/docker info
 Containers: 0
  Running: 0
  Paused: 0
@@ -170,7 +164,7 @@ Live Restore Enabled: false
 ```
 
 ```console
-$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock docker version
+$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock arm32v7/docker version
 Client:
  Version:      17.05.0-ce
  API version:  1.28 (downgraded from 1.29)
@@ -192,7 +186,7 @@ Server:
 ## Custom daemon flags
 
 ```console
-$ docker run --privileged --name some-overlay-docker -d docker:dind --storage-driver=overlay
+$ docker run --privileged --name some-overlay-docker -d arm32v7/docker:dind --storage-driver=overlay
 ```
 
 ## Where to Store Data
@@ -208,7 +202,7 @@ The Docker documentation is a good starting point for understanding the differen
 2.	Start your `docker` container like this:
 
 	```console
-	$ docker run --privileged --name some-docker -v /my/own/var-lib-docker:/var/lib/docker -d docker:dind
+	$ docker run --privileged --name some-docker -v /my/own/var-lib-docker:/var/lib/docker -d arm32v7/docker:dind
 	```
 
 The `-v /my/own/var-lib-docker:/var/lib/docker` part of the command mounts the `/my/own/var-lib-docker` directory from the underlying host system as `/var/lib/docker` inside the container, where Docker by default will write its data files.
