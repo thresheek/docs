@@ -16,11 +16,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`20190508`, `edge` (*x86_64//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/3041aca50b9f59c084bf9b40692babb71efcf583/x86_64//Dockerfile)
--	[`3.9.4`, `3.9`, `latest` (*x86_64//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/29db8d88a0387f56cc77b270f72d33b9d48fd021/x86_64//Dockerfile)
--	[`3.8.4`, `3.8` (*x86_64//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/dc10be162e9d2c3f799fde73e25ad30f78ff479b/x86_64//Dockerfile)
--	[`3.7.3`, `3.7` (*x86_64//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/e5205c8b54dd31cf9f9bb010f56cd5dfca73a711/x86_64//Dockerfile)
--	[`3.6.5`, `3.6` (*x86_64//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/a63b6f1205ccb10d0df96f743de4247df6e59b39/x86_64//Dockerfile)
+-	[`20190508`, `edge` (*s390x//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/3041aca50b9f59c084bf9b40692babb71efcf583/s390x//Dockerfile)
+-	[`3.9.4`, `3.9`, `latest` (*s390x//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/29db8d88a0387f56cc77b270f72d33b9d48fd021/s390x//Dockerfile)
+-	[`3.8.4`, `3.8` (*s390x//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/dc10be162e9d2c3f799fde73e25ad30f78ff479b/s390x//Dockerfile)
+-	[`3.7.3`, `3.7` (*s390x//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/e5205c8b54dd31cf9f9bb010f56cd5dfca73a711/s390x//Dockerfile)
+-	[`3.6.5`, `3.6` (*s390x//Dockerfile*)](https://github.com/alpinelinux/docker-alpine/blob/a63b6f1205ccb10d0df96f743de4247df6e59b39/s390x//Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/alpine/badge/icon) (`s390x/alpine` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/alpine/)
 
 # Quick reference
 
@@ -63,7 +65,7 @@ WARNING:
 Use like you would any other base image:
 
 ```dockerfile
-FROM alpine:3.7
+FROM s390x/alpine:3.7
 RUN apk add --no-cache mysql-client
 ENTRYPOINT ["mysql"]
 ```

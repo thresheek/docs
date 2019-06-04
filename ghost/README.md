@@ -21,6 +21,8 @@ WARNING:
 -	[`1.25.8`, `1.25`, `1` (*1/debian/Dockerfile*)](https://github.com/docker-library/ghost/blob/9e5102f97656cc31554c1c204a34f87b8289b20b/1/debian/Dockerfile)
 -	[`1.25.8-alpine`, `1.25-alpine`, `1-alpine` (*1/alpine/Dockerfile*)](https://github.com/docker-library/ghost/blob/9e5102f97656cc31554c1c204a34f87b8289b20b/1/alpine/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ghost/badge/icon) (`s390x/ghost` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ghost/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -62,7 +64,7 @@ Ghost is a free and open source blogging platform written in JavaScript and dist
 This will start a Ghost instance listening on the default Ghost port of 2368.
 
 ```console
-$ docker run -d --name some-ghost ghost
+$ docker run -d --name some-ghost s390x/ghost
 ```
 
 ## Custom port
@@ -70,7 +72,7 @@ $ docker run -d --name some-ghost ghost
 If you'd like to be able to access the instance from the host without the container's IP, standard port mappings can be used:
 
 ```console
-$ docker run -d --name some-ghost -p 3001:2368 ghost
+$ docker run -d --name some-ghost -p 3001:2368 s390x/ghost
 ```
 
 Then, access it via `http://localhost:3001` or `http://host-ip:3001` in a browser.
@@ -88,13 +90,13 @@ Mount your existing content. In this example we also use the Alpine base image.
 ### Ghost 1.x.x
 
 ```console
-$ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/ghost/content ghost:1-alpine
+$ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/ghost/content s390x/ghost:1-alpine
 ```
 
 ### Ghost 0.11.xx
 
 ```console
-$ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/ghost ghost:0.11-alpine
+$ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/ghost s390x/ghost:0.11-alpine
 ```
 
 ### Docker Volume
@@ -102,7 +104,7 @@ $ docker run -d --name some-ghost -p 3001:2368 -v /path/to/ghost/blog:/var/lib/g
 Alternatively you can use a [data container](http://docs.docker.com/engine/tutorials/dockervolumes/) that has a volume that points to `/var/lib/ghost/content` (or /var/lib/ghost for 0.11.x) and then reference it:
 
 ```console
-$ docker run -d --name some-ghost --volumes-from some-ghost-data ghost
+$ docker run -d --name some-ghost --volumes-from some-ghost-data s390x/ghost
 ```
 
 ### SQLite Database
@@ -114,7 +116,7 @@ This Docker image for Ghost uses SQLite. There is nothing special to configure.
 All Ghost configuration parameters (such as `url`) can be specified via environment variables. See [the Ghost documentation](https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables) for details about what configuration is allowed and how to convert a nested configuration key into the appropriate environment variable name:
 
 ```console
-$ docker run -d --name some-ghost -e url=http://some-ghost.example.com ghost
+$ docker run -d --name some-ghost -e url=http://some-ghost.example.com s390x/ghost
 ```
 
 (There are further configuration examples in the `stack.yml` listed below.)
@@ -170,13 +172,13 @@ Run `docker stack deploy -c stack.yml ghost` (or `docker-compose -f stack.yml up
 
 # Image Variants
 
-The `ghost` images come in many flavors, each designed for a specific use case.
+The `s390x/ghost` images come in many flavors, each designed for a specific use case.
 
-## `ghost:<version>`
+## `s390x/ghost:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `ghost:<version>-alpine`
+## `s390x/ghost:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

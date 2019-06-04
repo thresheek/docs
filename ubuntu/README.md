@@ -16,12 +16,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`18.04`, `bionic-20190515`, `bionic`, `latest` (*bionic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/010bf9649b1d10e2c34b159a9a9b338d0fdd4939/bionic/Dockerfile)
--	[`18.10`, `cosmic-20190515`, `cosmic` (*cosmic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/010bf9649b1d10e2c34b159a9a9b338d0fdd4939/cosmic/Dockerfile)
--	[`19.04`, `disco-20190515`, `disco`, `rolling` (*disco/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/010bf9649b1d10e2c34b159a9a9b338d0fdd4939/disco/Dockerfile)
--	[`19.10`, `eoan-20190508`, `eoan`, `devel` (*eoan/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/010bf9649b1d10e2c34b159a9a9b338d0fdd4939/eoan/Dockerfile)
--	[`14.04`, `trusty-20190515`, `trusty` (*trusty/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/010bf9649b1d10e2c34b159a9a9b338d0fdd4939/trusty/Dockerfile)
--	[`16.04`, `xenial-20190515`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/010bf9649b1d10e2c34b159a9a9b338d0fdd4939/xenial/Dockerfile)
+-	[`18.04`, `bionic-20190515`, `bionic`, `latest` (*bionic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/4f55bf693232c85b18f9e6084c8f6780a24c3ba4/bionic/Dockerfile)
+-	[`18.10`, `cosmic-20190515`, `cosmic` (*cosmic/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/4f55bf693232c85b18f9e6084c8f6780a24c3ba4/cosmic/Dockerfile)
+-	[`19.04`, `disco-20190515`, `disco`, `rolling` (*disco/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/4f55bf693232c85b18f9e6084c8f6780a24c3ba4/disco/Dockerfile)
+-	[`19.10`, `eoan-20190508`, `eoan`, `devel` (*eoan/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/4f55bf693232c85b18f9e6084c8f6780a24c3ba4/eoan/Dockerfile)
+-	[`16.04`, `xenial-20190515`, `xenial` (*xenial/Dockerfile*)](https://github.com/tianon/docker-brew-ubuntu-core/blob/4f55bf693232c85b18f9e6084c8f6780a24c3ba4/xenial/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ubuntu/badge/icon) (`s390x/ubuntu` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/ubuntu/)
 
 # Quick reference
 
@@ -65,9 +66,9 @@ Development of Ubuntu is led by UK-based Canonical Ltd., a company owned by Sout
 
 This image is built from official rootfs tarballs provided by Canonical (specifically, https://partner-images.canonical.com/core/).
 
-The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
+The `s390x/ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `s390x/ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
-Along a similar vein, the `ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
+Along a similar vein, the `s390x/ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
 
 ## Locales
 

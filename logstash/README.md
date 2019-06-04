@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.1.0` (*7/Dockerfile*)](https://github.com/docker-library/logstash/blob/e377a4eb13e5e54a613de35ce310bcf0d3942d44/7/Dockerfile)
--	[`6.8.0` (*6/Dockerfile*)](https://github.com/docker-library/logstash/blob/4d095533c8728a7b1dec3c7c96f126fa16f37f03/6/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `logstash` does not support the currently selected architecture (`s390x`).
 
 # Quick reference
 

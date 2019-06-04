@@ -26,6 +26,8 @@ WARNING:
 -	[`18.06.3-ce-dind`, `18.06.3-dind`, `18.06-dind`, `edge-dind` (*18.06/dind/Dockerfile*)](https://github.com/docker-library/docker/blob/27471a8b93e980bd4c51464ee933ed90fd36bf97/18.06/dind/Dockerfile)
 -	[`18.06.3-ce-git`, `18.06.3-git`, `18.06-git`, `edge-git` (*18.06/git/Dockerfile*)](https://github.com/docker-library/docker/blob/595ad0c92090937dcb7c200900fb97e36d36c412/18.06/git/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/docker/badge/icon) (`s390x/docker` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/docker/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -75,7 +77,7 @@ If you are still convinced that you need Docker-in-Docker and not just access to
 ## Start a daemon instance
 
 ```console
-$ docker run --privileged --name some-docker -d docker:dind
+$ docker run --privileged --name some-docker -d s390x/docker:dind
 ```
 
 **Note:** `--privileged` is required for Docker-in-Docker to function properly, but it should be used with care as it provides full access to the host environment, as explained [in the relevant section of the Docker documentation](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
@@ -85,7 +87,7 @@ By default, the `dind` variants of this image add `--host=tcp://0.0.0.0:2375` (o
 ## Connect to it from a second container
 
 ```console
-$ docker run --rm --link some-docker:docker docker:edge version
+$ docker run --rm --link some-docker:docker s390x/docker:edge version
 Client:
  Version:      17.05.0-ce
  API version:  1.27 (downgraded from 1.29)
@@ -105,7 +107,7 @@ Server:
 ```
 
 ```console
-$ docker run -it --rm --link some-docker:docker docker:edge sh
+$ docker run -it --rm --link some-docker:docker s390x/docker:edge sh
 / # docker version
 Client:
  Version:      17.05.0-ce
@@ -126,7 +128,7 @@ Server:
 ```
 
 ```console
-$ docker run --rm --link some-docker:docker docker info
+$ docker run --rm --link some-docker:docker s390x/docker info
 Containers: 0
  Running: 0
  Paused: 0
@@ -170,7 +172,7 @@ Live Restore Enabled: false
 ```
 
 ```console
-$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock docker version
+$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock s390x/docker version
 Client:
  Version:      17.05.0-ce
  API version:  1.28 (downgraded from 1.29)
@@ -192,7 +194,7 @@ Server:
 ## Custom daemon flags
 
 ```console
-$ docker run --privileged --name some-overlay-docker -d docker:dind --storage-driver=overlay
+$ docker run --privileged --name some-overlay-docker -d s390x/docker:dind --storage-driver=overlay
 ```
 
 ## Where to Store Data
@@ -208,7 +210,7 @@ The Docker documentation is a good starting point for understanding the differen
 2.	Start your `docker` container like this:
 
 	```console
-	$ docker run --privileged --name some-docker -v /my/own/var-lib-docker:/var/lib/docker -d docker:dind
+	$ docker run --privileged --name some-docker -v /my/own/var-lib-docker:/var/lib/docker -d s390x/docker:dind
 	```
 
 The `-v /my/own/var-lib-docker:/var/lib/docker` part of the command mounts the `/my/own/var-lib-docker` directory from the underlying host system as `/var/lib/docker` inside the container, where Docker by default will write its data files.

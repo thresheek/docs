@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.8.5`, `1.8`, `1`, `latest` (*1.8/Dockerfile*)](https://github.com/composer/docker/blob/b09945e1c20d64bc62b20dbc20e77eec93d3ee87/1.8/Dockerfile)
--	[`1.7.3`, `1.7` (*1.7/Dockerfile*)](https://github.com/composer/docker/blob/b09945e1c20d64bc62b20dbc20e77eec93d3ee87/1.7/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `composer` does not support the currently selected architecture (`s390x`).
 
 # Quick reference
 
@@ -64,7 +65,7 @@ Running the `composer` image is as simple as follows:
 ```console
 $ docker run --rm --interactive --tty \
   --volume $PWD:/app \
-  composer install
+  s390x/composer install
 ```
 
 ### Persistent cache / global configuration
@@ -75,7 +76,7 @@ You can bind mount the Composer home directory from your host to the container t
 $ docker run --rm --interactive --tty \
   --volume $PWD:/app \
   --volume $COMPOSER_HOME:/tmp \
-  composer install
+  s390x/composer install
 ```
 
 **Note:** this relies on the fact that the `COMPOSER_HOME` value is set to `/tmp` in the image by default.
@@ -91,7 +92,7 @@ $ COMPOSER_HOME=$HOME/.config/composer \
   --volume $COMPOSER_HOME:$COMPOSER_HOME \
   --volume $COMPOSER_CACHE_DIR:$COMPOSER_CACHE_DIR \
   --volume $PWD:/app \
-  composer install
+  s390x/composer install
 ```
 
 ### Filesystem permissions
@@ -102,7 +103,7 @@ By default, Composer runs as root inside the container. This can lead to permiss
 $ docker run --rm --interactive --tty \
   --volume $PWD:/app \
   --user $(id -u):$(id -g) \
-  composer install
+  s390x/composer install
 ```
 
 ### Private repositories / SSH agent
@@ -114,7 +115,7 @@ $ docker run --rm --interactive --tty \
   --volume $PWD:/app \
   --volume $SSH_AUTH_SOCK:/ssh-auth.sock \
   --env SSH_AUTH_SOCK=/ssh-auth.sock \
-  composer install
+  s390x/composer install
 ```
 
 **Note:** This currently does not work on OSX, see [docker/for-mac#410](https://github.com/docker/for-mac/issues/410).
@@ -129,7 +130,7 @@ $ docker run --rm --interactive --tty \
   --volume /etc/group:/etc/group:ro \
   --env SSH_AUTH_SOCK=/ssh-auth.sock \
   --user $(id -u):$(id -g) \
-  composer install
+  s390x/composer install
 ```
 
 # Troubleshooting
@@ -169,7 +170,7 @@ Suggestions:
 	```console
 	$ docker run --rm --interactive --tty \
 	  --volume $PWD:/app \
-	  composer install --ignore-platform-reqs --no-scripts
+	  s390x/composer install --ignore-platform-reqs --no-scripts
 	```
 
 -	create your own buid image and [install](https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md) Composer inside it.
@@ -177,7 +178,7 @@ Suggestions:
 	**Note:** Docker 17.05 introduced [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/), simplifying this enormously:
 
 	```dockerfile
-	COPY --from=composer /usr/bin/composer /usr/bin/composer
+	COPY --from=s390x/composer /usr/bin/composer /usr/bin/composer
 	```
 
 # License
