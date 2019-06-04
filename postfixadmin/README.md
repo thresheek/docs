@@ -16,9 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.2.2-apache`, `3.2-apache`, `3-apache`, `apache`, `3.2.2`, `3.2`, `3`, `latest` (*apache/Dockerfile*)](https://github.com/postfixadmin/docker/blob/a70ae86e94eb4631515edd0f79df40fb9c756a4e/apache/Dockerfile)
--	[`3.2.2-fpm`, `3.2-fpm`, `3-fpm`, `fpm` (*fpm/Dockerfile*)](https://github.com/postfixadmin/docker/blob/a70ae86e94eb4631515edd0f79df40fb9c756a4e/fpm/Dockerfile)
 -	[`3.2.2-fpm-alpine`, `3.2-fpm-alpine`, `3-fpm-alpine`, `fpm-alpine` (*fpm-alpine/Dockerfile*)](https://github.com/postfixadmin/docker/blob/a70ae86e94eb4631515edd0f79df40fb9c756a4e/fpm-alpine/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v6/job/postfixadmin/badge/icon) (`arm32v6/postfixadmin` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v6/job/postfixadmin/)
 
 # Quick reference
 
@@ -67,7 +67,7 @@ $ docker run -e POSTFIXADMIN_DB_TYPE=mysqli \
            -e POSTFIXADMIN_DB_PASSWORD=topsecret \
            -e POSTFIXADMIN_DB_NAME=postfixadmin \
            --name some-postfixadmin \
-        postfixadmin
+        arm32v6/postfixadmin
 ```
 
 `POSTFIXADMIN_DB_TYPE` can be one of :
@@ -90,7 +90,7 @@ $ docker run -e POSTFIXADMIN_DB_TYPE=mysqli \
            -e POSTFIXADMIN_DB_NAME=postfixadmin \
            --name some-postfixadmin \
            -p 8080:80
-        postfixadmin
+        arm32v6/postfixadmin
 ```
 
 Then, access it via `http://localhost:8080` or `http://host-ip:8080` in a browser.
@@ -99,7 +99,7 @@ Then, access it via `http://localhost:8080` or `http://host-ip:8080` in a browse
 
 ```console
 $ docker run --name some-postfixadmin -p 8080:80 %%image%%
-$ docker run --name some-postfixadmin -v /local/path/to/config.local.php:/var/www/html/config.local.php -p 8080:80 postfixadmin
+$ docker run --name some-postfixadmin -v /local/path/to/config.local.php:/var/www/html/config.local.php -p 8080:80 arm32v6/postfixadmin
 ```
 
 ## Image Variants
@@ -156,13 +156,13 @@ Run docker stack deploy -c stack.yml postfixadmin (or docker-compose -f stack.ym
 
 # Image Variants
 
-The `postfixadmin` images come in many flavors, each designed for a specific use case.
+The `arm32v6/postfixadmin` images come in many flavors, each designed for a specific use case.
 
-## `postfixadmin:<version>`
+## `arm32v6/postfixadmin:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `postfixadmin:<version>-alpine`
+## `arm32v6/postfixadmin:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

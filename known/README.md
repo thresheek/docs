@@ -16,7 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`0.9.9`, `0.9`, `0`, `latest` (*Dockerfile*)](https://github.com/idno/Known-Docker/blob/3454a52b4ad48e22b95e706dba9ff953cf84c2b1/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `known` does not support the currently selected architecture (`arm32v6`).
 
 # Quick reference
 
@@ -57,7 +59,7 @@ Known is a social publishing platform. Publish on your own site, reach your audi
 # How to use this image
 
 ```bash
-docker run --link some-mysql:db -d known
+docker run --link some-mysql:db -d arm32v6/known
 ```
 
 Now you can get access to fpm running on port 9000 inside the container. If you want to access it from the Internets, we recommend using a reverse proxy in front. You can find more information on that on the [docker-compose](#docker-compose) section.

@@ -16,7 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.x`, `1.16.x`, `1.16.4`, `latest` (*alpine/Dockerfile*)](https://github.com/ExpressGateway/docker-express-gateway/blob/1913ade15763cb26a22286295902bb85eed76dd7/alpine/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `express-gateway` does not support the currently selected architecture (`arm32v6`).
 
 # Quick reference
 
@@ -92,7 +94,7 @@ $ docker run -d --name express-gateway \
     -v /my/own/datadir:/var/lib/eg \
     -p 8080:8080 \
     -p 9876:9876 \
-    express-gateway
+    arm32v6/express-gateway
 ```
 
 *Note:* You might want to expose other ports to the host in case you're serving your APIs through **HTTPS**.
@@ -103,10 +105,10 @@ You can now read the docs at [express-gateway.io/docs](http://express-gateway.io
 
 ### Install plugin
 
-You can install custom plugins to the current Express Gateway image just creating a new `Dockerfile`, use `express-gateway` as base image and then install the required plugins as global yarn packages
+You can install custom plugins to the current Express Gateway image just creating a new `Dockerfile`, use `arm32v6/express-gateway` as base image and then install the required plugins as global yarn packages
 
 ```dockerfile
-FROM express-gateway
+FROM arm32v6/express-gateway
 RUN yarn global add express-gateway-plugin-name
 ```
 
