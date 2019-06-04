@@ -29,6 +29,8 @@ WARNING:
 -	[`1.8.0-scala_2.11`, `1.8-scala_2.11`, `scala_2.11` (*1.8/scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.8/scala_2.11-debian/Dockerfile)
 -	[`1.8.0-scala_2.12`, `1.8-scala_2.12`, `scala_2.12`, `1.8.0`, `1.8`, `latest` (*1.8/scala_2.12-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.8/scala_2.12-debian/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/flink/badge/icon) (`amd64/flink` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/flink/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -78,13 +80,13 @@ Starting with Flink 1.5, images without "hadoop" in the tag are the "Hadoop-free
 You can run a JobManager (master).
 
 ```console
-$ docker run --name flink_jobmanager -d -t flink jobmanager
+$ docker run --name flink_jobmanager -d -t amd64/flink jobmanager
 ```
 
 You can also run a TaskManager (worker). Notice that workers need to register with the JobManager directly or via ZooKeeper so the master starts to send them tasks to execute.
 
 ```console
-$ docker run --name flink_taskmanager -d -t flink taskmanager
+$ docker run --name flink_taskmanager -d -t amd64/flink taskmanager
 ```
 
 ## Running a cluster using Docker Compose

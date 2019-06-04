@@ -19,6 +19,8 @@ WARNING:
 -	[`3.4.14`, `3.4` (*3.4.14/Dockerfile*)](https://github.com/31z4/zookeeper-docker/blob/0ac81c1137d4714fa2d5f698b99b29aabf1fa383/3.4.14/Dockerfile)
 -	[`3.5.5`, `3.5`, `latest` (*3.5.5/Dockerfile*)](https://github.com/31z4/zookeeper-docker/blob/0ac81c1137d4714fa2d5f698b99b29aabf1fa383/3.5.5/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/zookeeper/badge/icon) (`amd64/zookeeper` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/zookeeper/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -60,7 +62,7 @@ Apache ZooKeeper is a software project of the Apache Software Foundation, provid
 ## Start a Zookeeper server instance
 
 ```console
-$ docker run --name some-zookeeper --restart always -d zookeeper
+$ docker run --name some-zookeeper --restart always -d amd64/zookeeper
 ```
 
 This image includes `EXPOSE 2181 2888 3888` (the zookeeper client port, follower port, election port respectively), so standard container linking will make it automatically available to the linked containers. Since the Zookeeper "fails fast" it's better to always restart it.
@@ -129,7 +131,7 @@ Consider using [Docker Swarm](https://www.docker.com/products/docker-swarm) when
 Zookeeper configuration is located in `/conf`. One way to change it is mounting your config file as a volume:
 
 ```console
-$ docker run --name some-zookeeper --restart always -d -v $(pwd)/zoo.cfg:/conf/zoo.cfg zookeeper
+$ docker run --name some-zookeeper --restart always -d -v $(pwd)/zoo.cfg:/conf/zoo.cfg amd64/zookeeper
 ```
 
 ## Environment variables

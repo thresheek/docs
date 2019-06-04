@@ -18,6 +18,8 @@ WARNING:
 
 -	[`0.4.0`, `0.4`, `0`, `latest` (*arches/amd64/Dockerfile*)](https://github.com/tianon/docker-brew-cirros/blob/d04ffb350eb29c24bafe12f6b109aa3990309771/arches/amd64/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/cirros/badge/icon) (`amd64/cirros` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/cirros/)
+
 # Quick reference
 
 -	**Where to get help**:  

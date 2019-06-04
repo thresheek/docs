@@ -19,6 +19,8 @@ WARNING:
 -	[`1.6.2`, `1.6`, `latest` (*docker/1.6/Dockerfile*)](https://github.com/eclipse/mosquitto/blob/995f90dbafa82c7fd3d24f7174d094f11c2d6c85/docker/1.6/Dockerfile)
 -	[`1.5.8`, `1.5` (*docker/1.5/Dockerfile*)](https://github.com/eclipse/mosquitto/blob/995f90dbafa82c7fd3d24f7174d094f11c2d6c85/docker/1.5/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/eclipse-mosquitto/badge/icon) (`amd64/eclipse-mosquitto` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/eclipse-mosquitto/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -68,7 +70,7 @@ Three directories have been created in the image to be used for configuration, p
 When running the image, the default configuration values are used. To use a custom configuration file, mount a **local** configuration file to `/mosquitto/config/mosquitto.conf`
 
 ```console
-$ docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
+$ docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf amd64/eclipse-mosquitto
 ```
 
 Configuration can be changed to:
@@ -89,7 +91,7 @@ i.e. add the following to `mosquitto.conf`:
 Run a container using the new image:
 
 ```console
-$ docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf -v /mosquitto/data -v /mosquitto/log eclipse-mosquitto
+$ docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf -v /mosquitto/data -v /mosquitto/log amd64/eclipse-mosquitto
 ```
 
 **Note**: if the mosquitto configuration (mosquitto.conf) was modified to use non-default ports, the docker run command will need to be updated to expose the ports that have been configured.

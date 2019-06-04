@@ -19,6 +19,8 @@ WARNING:
 -	[`6`, `latest` (*dist/6/x86_64/Dockerfile*)](https://github.com/juanluisbaptiste/docker-brew-mageia/blob/8fa1a171030b6bc20216cc6a6d3f6d77662eabc6/dist/6/x86_64/Dockerfile)
 -	[`7` (*dist/7/x86_64/Dockerfile*)](https://github.com/juanluisbaptiste/docker-brew-mageia/blob/8fa1a171030b6bc20216cc6a6d3f6d77662eabc6/dist/7/x86_64/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/mageia/badge/icon) (`amd64/mageia` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/mageia/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -68,7 +70,7 @@ To date, Mageia:
 ## Create a Dockerfile for your container
 
 ```dockerfile
-FROM mageia:6
+FROM amd64/mageia:6
 MAINTAINER  "Foo Bar" <foo@bar.com>
 CMD [ "bash" ]
 ```

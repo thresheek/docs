@@ -101,6 +101,8 @@ WARNING:
 -	[`3.2.0` (*3.2.0/community/Dockerfile*)](https://github.com/neo4j/docker-neo4j-publish/blob/c0364e1bcbc35a536abb93ec88dc3bfc288b23bf/3.2.0/community/Dockerfile)
 -	[`3.2.0-enterprise` (*3.2.0/enterprise/Dockerfile*)](https://github.com/neo4j/docker-neo4j-publish/blob/c0364e1bcbc35a536abb93ec88dc3bfc288b23bf/3.2.0/enterprise/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/neo4j/badge/icon) (`amd64/neo4j` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/neo4j/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -145,7 +147,7 @@ You can start a Neo4j container like this:
 docker run \
     --publish=7474:7474 --publish=7687:7687 \
     --volume=$HOME/neo4j/data:/data \
-    neo4j
+    amd64/neo4j
 ```
 
 which allows you to access neo4j through your browser at [http://localhost:7474](http://localhost:7474).
@@ -164,7 +166,7 @@ You can start an instance of Neo4j 2.3 like this:
 docker run \
     --publish=7474:7474 \
     --volume=$HOME/neo4j/data:/data \
-    neo4j:2.3
+    amd64/neo4j:2.3
 ```
 
 # Documentation

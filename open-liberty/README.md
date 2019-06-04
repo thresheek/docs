@@ -44,6 +44,8 @@ WARNING:
 -	[`springBoot1-java8-ibmsfj` (*official/springBoot1/java8/ibmsfj/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot1/java8/ibmsfj/Dockerfile)
 -	[`springBoot1-java11` (*official/springBoot1/java11/openj9/Dockerfile*)](https://github.com/OpenLiberty/ci.docker/blob/000a096c445bc96e89b59b11517e511ff82ac17c/official/springBoot1/java11/openj9/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/open-liberty/badge/icon) (`amd64/open-liberty` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/open-liberty/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -124,7 +126,7 @@ There are multiple tags available in this repository.
 The `kernel` image contains the Liberty kernel and can be used as the basis for custom built images that contain only the features required for a specific application. For example, the following Dockerfile starts with this image, copies in the `server.xml` that lists the features required by the application.
 
 ```dockerfile
-FROM open-liberty:kernel
+FROM amd64/open-liberty:kernel
 COPY --chown=1001:0  Sample1.war /config/dropins/
 COPY --chown=1001:0  server.xml /config/
 ```
@@ -160,7 +162,7 @@ When using `volumes`, an application file can be mounted in the `dropins` direct
 ```console
 $ docker run -d -p 80:9080 -p 443:9443 \
 	    -v /tmp/DefaultServletEngine/dropins/Sample1.war:/config/dropins/Sample1.war \
-	    open-liberty:webProfile8
+	    amd64/open-liberty:webProfile8
 ```
 
 When the server is started, you can browse to http://localhost/Sample1/SimpleServlet on the Docker host.
@@ -172,7 +174,7 @@ For greater flexibility over configuration, it is possible to mount an entire se
 	```console
 	$ docker run -d -p 80:9080 \
 	  -v /tmp/DefaultServletEngine:/config \
-	  open-liberty:webProfile8
+	  amd64/open-liberty:webProfile8
 	```
 
 # Using `springBoot` images
@@ -182,7 +184,7 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 1.	A Spring Boot application JAR deploys to the `dropins/spring` directory within the default server configuration, not the `dropins` directory. Liberty allows one Spring Boot application per server configuration. You can create a Spring Boot application layer over this image by adding the application JAR to the `dropins/spring` directory. In this example we copied `hellospringboot.jar` from `/tmp` to the same directory containing the following Dockerfile.
 
 	```dockerfile
-	FROM open-liberty:springBoot2
+	FROM amd64/open-liberty:springBoot2
 	COPY --chown=1001:0 hellospringboot.jar /config/dropins/spring/
 	```
 
@@ -198,13 +200,13 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 	You can use the `springBootUtility` command to create thin application and library cache layers over a `springBoot` image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache.
 
 	```dockerfile
-	FROM open-liberty:springBoot2 as staging
+	FROM amd64/open-liberty:springBoot2 as staging
 	COPY --chown=1001:0 hellospringboot.jar /staging/myFatApp.jar
 	RUN springBootUtility thin \
 	   --sourceAppPath=/staging/myFatApp.jar \
 	   --targetThinAppPath=/staging/myThinApp.jar \
 	   --targetLibCachePath=/staging/lib.index.cache
-	FROM open-liberty:springBoot2
+	FROM amd64/open-liberty:springBoot2
 	COPY --from=staging /staging/lib.index.cache /lib.index.cache
 	COPY --from=staging /staging/myThinApp.jar /config/dropins/spring/myThinApp.jar
 	```
@@ -242,7 +244,7 @@ Or, create a named data volume container that exposes a volume at the location o
 
 ```console
 docker run -v /opt/ol/wlp//output/.classCache \
-    --name classcache open-liberty true
+    --name classcache amd64/open-liberty true
 ```
 
 Then, run the Open Liberty image with the volumes from the data volume container classcache mounted as follows:
@@ -258,7 +260,7 @@ Liberty writes to two different directories when running: `/opt/ol/wlp//output` 
 ```console
 docker run -d -p 80:9080 -p 443:9443 \
     --tmpfs /opt/ol/wlp//output --tmpfs /logs -v /config --read-only \
-    open-liberty:webProfile8
+    amd64/open-liberty:webProfile8
 ```
 
 # Relationship between Open Liberty and WebSphere Liberty

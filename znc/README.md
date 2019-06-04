@@ -19,6 +19,8 @@ WARNING:
 -	[`1.7.3`, `1.7`, `latest` (*full/Dockerfile*)](https://github.com/znc/znc-docker/blob/c75452c182d9e06e84f7ad7e1958e8e6063eb38a/full/Dockerfile)
 -	[`1.7.3-slim`, `1.7-slim`, `slim` (*slim/Dockerfile*)](https://github.com/znc/znc-docker/blob/c75452c182d9e06e84f7ad7e1958e8e6063eb38a/slim/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/znc/badge/icon) (`amd64/znc` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/znc/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -60,13 +62,13 @@ ZNC is an IRC network bouncer (BNC). It can detach the client from the actual IR
 ZNC in this image stores its configuration in `/znc-data`. If you have existing configuration, you can reuse it with `-v $HOME/.znc:/znc-data`. Alternatively, you can create a new config in a volume or in a local dir. The examples below assumes a volume named `znc-cfg`.
 
 ```console
-$ docker run -it -v znc-cfg:/znc-data znc --makeconf
+$ docker run -it -v znc-cfg:/znc-data amd64/znc --makeconf
 ```
 
 To run ZNC:
 
 ```console
-$ docker run -p 6697:6697 -v znc-cfg:/znc-data znc
+$ docker run -p 6697:6697 -v znc-cfg:/znc-data amd64/znc
 ```
 
 The port should match the port you used during `--makeconf`. Note that 6667 is often blocked by web browsers, and therefore is not recommended.
@@ -79,9 +81,9 @@ This image contains the latest released version. If you want the bleeding edge (
 
 # Image Variants
 
-The `znc` images come in many flavors, each designed for a specific use case.
+The `amd64/znc` images come in many flavors, each designed for a specific use case.
 
-## `znc:<version>`
+## `amd64/znc:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 

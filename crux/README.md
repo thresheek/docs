@@ -19,6 +19,8 @@ WARNING:
 -	[`3.4`, `latest` (*Dockerfile*)](https://github.com/cruxlinux/docker-crux/blob/da081a9004c5559cd77a1e2c2521193ccb2afdd2/Dockerfile)
 -	[`3.2` (*Dockerfile*)](https://github.com/cruxlinux/docker-crux/blob/07e966125ba3d6d48a12489830917e8a9bc983a7/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/crux/badge/icon) (`amd64/crux` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/crux/)
+
 # Quick reference
 
 -	**Where to get help**:  

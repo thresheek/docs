@@ -26,6 +26,8 @@ WARNING:
 -	[`openjdk-11-boot`, `openjdk-11-boot-2.8.2` (*target/openjdk-11/debian/boot/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f4257cfa677af38c2f8a9cd0455747c9bee835ca/target/openjdk-11/debian/boot/Dockerfile)
 -	[`openjdk-11-tools-deps`, `openjdk-11-tools-deps-1.10.0.442` (*target/openjdk-11/debian/tools-deps/Dockerfile*)](https://github.com/Quantisan/docker-clojure/blob/f4257cfa677af38c2f8a9cd0455747c9bee835ca/target/openjdk-11/debian/tools-deps/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/clojure/badge/icon) (`amd64/clojure` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/clojure/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -88,7 +90,7 @@ But you can also append a hyphen and the version of that tool you'd like to use.
 Add a `Dockerfile` to an existing Leiningen/Clojure project with the following contents:
 
 ```dockerfile
-FROM clojure
+FROM amd64/clojure
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 CMD ["lein", "run"]
@@ -104,7 +106,7 @@ $ docker run -it --rm --name my-running-app my-clojure-app
 While the above is the most straightforward example of a `Dockerfile`, it does have some drawbacks. The `lein run` command will download your dependencies, compile the project, and then run it. That's a lot of work, all of which you may not want done every time you run the image. To get around this, you can download the dependencies and compile the project ahead of time. This will significantly reduce startup time when you run your image.
 
 ```dockerfile
-FROM clojure
+FROM amd64/clojure
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY project.clj /usr/src/app/
@@ -123,7 +125,7 @@ You can then build and run the image as above.
 If you have an existing Lein/Clojure project, it's fairly straightforward to compile your project into a jar from a container:
 
 ```console
-$ docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app clojure lein uberjar
+$ docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app amd64/clojure lein uberjar
 ```
 
 This will build your project into a jar file located in your project's `target/uberjar` directory.
@@ -134,13 +136,13 @@ See [the official image README](https://github.com/Quantisan/docker-clojure/blob
 
 # Image Variants
 
-The `clojure` images come in many flavors, each designed for a specific use case.
+The `amd64/clojure` images come in many flavors, each designed for a specific use case.
 
-## `clojure:<version>`
+## `amd64/clojure:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `clojure:<version>-alpine`
+## `amd64/clojure:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

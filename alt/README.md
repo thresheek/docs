@@ -20,6 +20,8 @@ WARNING:
 -	[`p8` (*x86_64//Dockerfile*)](https://github.com/alt-cloud/docker-brew-alt/blob/6c0cb7e244cab49515ddff7d081861eca5bf14e6/x86_64//Dockerfile)
 -	[`sisyphus` (*x86_64//Dockerfile*)](https://github.com/alt-cloud/docker-brew-alt/blob/d32040422c8f7711a2849f6af41d25bdba420e4d/x86_64//Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/alt/badge/icon) (`amd64/alt` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/alt/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -72,7 +74,7 @@ As said above, Sisyphus is a frequently updated repository mainly designed for d
 
 # About this image
 
-The `alt:latest` tag will always point the latest stable release (which is, at the time of this writing, `alt:p8`).
+The `amd64/alt:latest` tag will always point the latest stable release (which is, at the time of this writing, `amd64/alt:p8`).
 
 ## How It's Made
 

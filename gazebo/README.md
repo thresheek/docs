@@ -27,6 +27,8 @@ WARNING:
 -	[`gzserver10`, `gzserver10-bionic` (*gazebo/10/ubuntu/bionic/gzserver10/Dockerfile*)](https://github.com/osrf/docker_images/blob/00d02282c2393ccde655fa0c333b4410a10b3985/gazebo/10/ubuntu/bionic/gzserver10/Dockerfile)
 -	[`libgazebo10`, `libgazebo10-bionic`, `latest` (*gazebo/10/ubuntu/bionic/libgazebo10/Dockerfile*)](https://github.com/osrf/docker_images/blob/00d02282c2393ccde655fa0c333b4410a10b3985/gazebo/10/ubuntu/bionic/libgazebo10/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/gazebo/badge/icon) (`amd64/gazebo` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/amd64/job/gazebo/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -68,7 +70,7 @@ Robot simulation is an essential tool in every roboticist's toolbox. A well-desi
 ## Create a `Dockerfile` in your Gazebo project
 
 ```dockerfile
-FROM gazebo:gzserver8
+FROM amd64/gazebo:gzserver8
 # place here your application's setup specifics
 CMD [ "gzserver", "my-gazebo-app-args" ]
 ```
@@ -99,7 +101,7 @@ Gazebo uses the `~/.gazebo/` directory for storing logs, models and scene info. 
 For example, if one wishes to use their own `.gazebo` folder that already resides in their local home directory, with a username of `ubuntu`, we can simple launch the container with an additional volume argument:
 
 ```console
-$ docker run -v "/home/ubuntu/.gazebo/:/root/.gazebo/" gazebo
+$ docker run -v "/home/ubuntu/.gazebo/:/root/.gazebo/" amd64/gazebo
 ```
 
 One thing to be careful about is that gzserver logs to files named `/root/.gazebo/server-<port>/*.log`, where `<port>` is the port number that server is listening on (11345 by default). If you run and mount multiple containers using the same default port and same host side directory, then they will collide and attempt writing to the same file. If you want to run multiple gzservers on the same docker host, then a bit more clever volume mounting of `~/.gazebo/` subfolders would be required.
@@ -119,13 +121,13 @@ In this short example, we'll spin up a new container running gazebo server, conn
 > First launch a gazebo server with a mounted volume for logging and name the container gazebo:
 
 ```console
-$ docker run -d -v="/tmp/.gazebo/:/root/.gazebo/" --name=gazebo gazebo
+$ docker run -d -v="/tmp/.gazebo/:/root/.gazebo/" --name=gazebo amd64/gazebo
 ```
 
 > Now open a new bash session in the container using the same entrypoint to configure the environment. Then download the double_pendulum model and load it into the simulation.
 
 ```console
-$ docker exec -it gazebo bash
+$ docker exec -it amd64/gazebo bash
 $ apt-get update && apt-get install -y curl
 $ curl -o double_pendulum.sdf http://models.gazebosim.org/double_pendulum_with_base/model-1_4.sdf
 $ gz model --model-name double_pendulum --spawn-file double_pendulum.sdf
