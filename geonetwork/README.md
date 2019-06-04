@@ -19,6 +19,8 @@ WARNING:
 -	[`3.6.0`, `3.6`, `latest` (*3.6.0/Dockerfile*)](https://github.com/geonetwork/docker-geonetwork/blob/9a28f0a61a8b043b1562f79caed9fdec3c009452/3.6.0/Dockerfile)
 -	[`3.6.0-postgres`, `3.6-postgres`, `postgres` (*3.6.0/postgres/Dockerfile*)](https://github.com/geonetwork/docker-geonetwork/blob/9a28f0a61a8b043b1562f79caed9fdec3c009452/3.6.0/postgres/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/i386/job/geonetwork/badge/icon) (`i386/geonetwork` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/i386/job/geonetwork/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -68,7 +70,7 @@ The project is part of the Open Source Geospatial Foundation ( [OSGeo](http://ww
 This command will start a debian-based container, running a Tomcat web server, with a geonetwork war deployed on the server:
 
 ```console
-$ docker run --name some-geonetwork -d geonetwork
+$ docker run --name some-geonetwork -d i386/geonetwork
 ```
 
 ## Publish port
@@ -76,7 +78,7 @@ $ docker run --name some-geonetwork -d geonetwork
 Geonetwork listens on port `8080`. If you want to access the container at the host, **you must publish this port**. For instance, this, will redirect all the container traffic on port 8080, to the same port on the host:
 
 ```console
-$ docker run --name some-geonetwork -d -p 8080:8080 geonetwork
+$ docker run --name some-geonetwork -d -p 8080:8080 i386/geonetwork
 ```
 
 Then, if you are running docker on Linux, you may access geonetwork at http://localhost:8080/geonetwork. Otherwise, replace `localhost` by the address of your docker machine.
@@ -90,7 +92,7 @@ By default, geonetwork sets the data directory on `/usr/local/tomcat/webapps/geo
 For instance, to set the data directory to `/var/lib/geonetwork_data`:
 
 ```console
-$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data geonetwork
+$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data i386/geonetwork
 ```
 
 ## Persist data
@@ -98,7 +100,7 @@ $ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetw
 If you want the data directory to live beyond restarts, or even destruction of the container, you can mount a directory from the docker engine's host into the container. - `-v <host path>:<data directory>`. For instance this, will mount the host directory `/host/geonetwork-docker` into `/var/lib/geonetwork_data` on the container:
 
 ```console
-$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data -v /host/geonetwork-docker:/var/lib/geonetwork_data geonetwork
+$ docker run --name some-geonetwork -d -p 8080:8080 -e DATA_DIR=/var/lib/geonetwork_data -v /host/geonetwork-docker:/var/lib/geonetwork_data i386/geonetwork
 ```
 
 ## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)

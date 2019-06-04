@@ -16,18 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.7.2-hadoop24-scala_2.11` (*1.7/hadoop24-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop24-scala_2.11-debian/Dockerfile)
--	[`1.7.2-hadoop24-scala_2.12`, `1.7.2-hadoop24`, `1.7-hadoop24` (*1.7/hadoop24-scala_2.12-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop24-scala_2.12-debian/Dockerfile)
--	[`1.7.2-hadoop26-scala_2.11` (*1.7/hadoop26-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop26-scala_2.11-debian/Dockerfile)
--	[`1.7.2-hadoop26-scala_2.12`, `1.7.2-hadoop26`, `1.7-hadoop26` (*1.7/hadoop26-scala_2.12-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop26-scala_2.12-debian/Dockerfile)
--	[`1.7.2-hadoop27-scala_2.11` (*1.7/hadoop27-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop27-scala_2.11-debian/Dockerfile)
--	[`1.7.2-hadoop27-scala_2.12`, `1.7.2-hadoop27`, `1.7-hadoop27` (*1.7/hadoop27-scala_2.12-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop27-scala_2.12-debian/Dockerfile)
--	[`1.7.2-hadoop28-scala_2.11` (*1.7/hadoop28-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop28-scala_2.11-debian/Dockerfile)
--	[`1.7.2-hadoop28-scala_2.12`, `1.7.2-hadoop28`, `1.7-hadoop28` (*1.7/hadoop28-scala_2.12-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/hadoop28-scala_2.12-debian/Dockerfile)
--	[`1.7.2-scala_2.11`, `1.7-scala_2.11` (*1.7/scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/scala_2.11-debian/Dockerfile)
--	[`1.7.2-scala_2.12`, `1.7-scala_2.12`, `1.7.2`, `1.7` (*1.7/scala_2.12-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.7/scala_2.12-debian/Dockerfile)
--	[`1.8.0-scala_2.11`, `1.8-scala_2.11`, `scala_2.11` (*1.8/scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.8/scala_2.11-debian/Dockerfile)
--	[`1.8.0-scala_2.12`, `1.8-scala_2.12`, `scala_2.12`, `1.8.0`, `1.8`, `latest` (*1.8/scala_2.12-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/f96f07a516dbd4d9544d22c5272006ccd0b988d6/1.8/scala_2.12-debian/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `flink` does not support the currently selected architecture (`i386`).
 
 # Quick reference
 
@@ -78,13 +69,13 @@ Starting with Flink 1.5, images without "hadoop" in the tag are the "Hadoop-free
 You can run a JobManager (master).
 
 ```console
-$ docker run --name flink_jobmanager -d -t flink jobmanager
+$ docker run --name flink_jobmanager -d -t i386/flink jobmanager
 ```
 
 You can also run a TaskManager (worker). Notice that workers need to register with the JobManager directly or via ZooKeeper so the master starts to send them tasks to execute.
 
 ```console
-$ docker run --name flink_taskmanager -d -t flink taskmanager
+$ docker run --name flink_taskmanager -d -t i386/flink taskmanager
 ```
 
 ## Running a cluster using Docker Compose

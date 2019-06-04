@@ -20,6 +20,8 @@ WARNING:
 -	[`1.1.3`, `1.1` (*1.1.3/Dockerfile*)](https://github.com/31z4/storm-docker/blob/4e9cdba376be0143ba0f041a1099bb7912b145ef/1.1.3/Dockerfile)
 -	[`1.2.2`, `1.2`, `latest` (*1.2.2/Dockerfile*)](https://github.com/31z4/storm-docker/blob/4e9cdba376be0143ba0f041a1099bb7912b145ef/1.2.2/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/i386/job/storm/badge/icon) (`i386/storm` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/i386/job/storm/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -63,7 +65,7 @@ Apache Storm is a distributed computation framework written predominantly in the
 Assuming you have `topology.jar` in the current directory.
 
 ```console
-$ docker run -it -v $(pwd)/topology.jar:/topology.jar storm storm jar /topology.jar org.apache.storm.starter.ExclamationTopology
+$ docker run -it -v $(pwd)/topology.jar:/topology.jar i386/storm storm jar /topology.jar org.apache.storm.starter.ExclamationTopology
 ```
 
 ## Setting up a minimal Storm cluster
@@ -77,25 +79,25 @@ $ docker run -it -v $(pwd)/topology.jar:/topology.jar storm storm jar /topology.
 2.	The Nimbus daemon has to be connected with the Zookeeper. It's also a "fail fast" system.
 
 	```console
-	$ docker run -d --restart always --name some-nimbus --link some-zookeeper:zookeeper storm storm nimbus
+	$ docker run -d --restart always --name some-nimbus --link some-zookeeper:zookeeper i386/storm storm nimbus
 	```
 
 3.	Finally start a single Supervisor node. It will talk to the Nimbus and Zookeeper.
 
 	```console
-	$ docker run -d --restart always --name supervisor --link some-zookeeper:zookeeper --link some-nimbus:nimbus storm storm supervisor
+	$ docker run -d --restart always --name supervisor --link some-zookeeper:zookeeper --link some-nimbus:nimbus i386/storm storm supervisor
 	```
 
 4.	Now you can submit a topology to our cluster.
 
 	```console
-	$ docker run --link some-nimbus:nimbus -it --rm -v $(pwd)/topology.jar:/topology.jar storm storm jar /topology.jar org.apache.storm.starter.WordCountTopology topology
+	$ docker run --link some-nimbus:nimbus -it --rm -v $(pwd)/topology.jar:/topology.jar i386/storm storm jar /topology.jar org.apache.storm.starter.WordCountTopology topology
 	```
 
 5.	Optionally, you can start the Storm UI.
 
 	```console
-	$ docker run -d -p 8080:8080 --restart always --name ui --link some-nimbus:nimbus storm storm ui
+	$ docker run -d -p 8080:8080 --restart always --name ui --link some-nimbus:nimbus i386/storm storm ui
 	```
 
 ## ... via [`docker stack deploy`](https://docs.docker.com/engine/reference/commandline/stack_deploy/) or [`docker-compose`](https://github.com/docker/compose)
@@ -147,13 +149,13 @@ This image uses [default configuration](https://github.com/apache/storm/blob/v1.
 1.	Using command line arguments.
 
 	```console
-	$ docker run -d --restart always --name nimbus storm storm nimbus -c storm.zookeeper.servers='["zookeeper"]'
+	$ docker run -d --restart always --name nimbus i386/storm storm nimbus -c storm.zookeeper.servers='["zookeeper"]'
 	```
 
 2.	Assuming you have `storm.yaml` in the current directory you can mount it as a volume.
 
 	```console
-	$ docker run -it -v $(pwd)/storm.yaml:/conf/storm.yaml storm storm nimbus
+	$ docker run -it -v $(pwd)/storm.yaml:/conf/storm.yaml i386/storm storm nimbus
 	```
 
 ## Logging
@@ -165,7 +167,7 @@ This image uses [default logging configuration](https://github.com/apache/storm/
 No data are persisted by default. For convenience there are `/data` and `/logs` directories in the image owned by `storm` user. Use them accordingly to persist data and logs using volumes.
 
 ```console
-$ docker run -it -v /logs -v /data storm storm nimbus
+$ docker run -it -v /logs -v /data i386/storm storm nimbus
 ```
 
 *Please be noticed that using paths other than those predefined is likely to cause permission denied errors. It's because for [security reasons](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#user) the Storm is running under the non-root `storm` user.*
