@@ -16,18 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `5`, `5.30`, `5.30.0` (*5.030.000-main/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.030.000-main/Dockerfile)
--	[`slim`, `5-slim`, `5.30-slim`, `5.30.0-slim` (*5.030.000-slim/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.030.000-slim/Dockerfile)
--	[`threaded`, `5-threaded`, `5.30-threaded`, `5.30.0-threaded` (*5.030.000-main,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.030.000-main,threaded/Dockerfile)
--	[`slim-threaded`, `5-slim-threaded`, `5.30-slim-threaded`, `5.30.0-slim-threaded` (*5.030.000-slim,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.030.000-slim,threaded/Dockerfile)
--	[`5.28`, `5.28.2` (*5.028.002-main/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.028.002-main/Dockerfile)
--	[`5.28-slim`, `5.28.2-slim` (*5.028.002-slim/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.028.002-slim/Dockerfile)
--	[`5.28-threaded`, `5.28.2-threaded` (*5.028.002-main,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.028.002-main,threaded/Dockerfile)
--	[`5.28-slim-threaded`, `5.28.2-slim-threaded` (*5.028.002-slim,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.028.002-slim,threaded/Dockerfile)
--	[`5.26`, `5.26.3` (*5.026.003-main/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.026.003-main/Dockerfile)
--	[`5.26-slim`, `5.26.3-slim` (*5.026.003-slim/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.026.003-slim/Dockerfile)
--	[`5.26-threaded`, `5.26.3-threaded` (*5.026.003-main,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.026.003-main,threaded/Dockerfile)
--	[`5.26-slim-threaded`, `5.26.3-slim-threaded` (*5.026.003-slim,threaded/Dockerfile*)](https://github.com/perl/docker-perl/blob/92233bc5293c2eb17f3019f329cc67fd96d92bcf/5.026.003-slim,threaded/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `perl` does not support the currently selected architecture (`arm32v5`).
 
 # Quick reference
 
@@ -70,7 +61,7 @@ Perl is a high-level, general-purpose, interpreted, dynamic programming language
 ## Create a `Dockerfile` in your Perl app project
 
 ```dockerfile
-FROM perl:5.20
+FROM arm32v5/perl:5.20
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 CMD [ "perl", "./your-daemon-or-script.pl" ]
@@ -88,15 +79,15 @@ $ docker run -it --rm --name my-running-app my-perl-app
 For many simple, single file projects, you may find it inconvenient to write a complete `Dockerfile`. In such cases, you can run a Perl script by using the Perl Docker image directly:
 
 ```console
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp perl:5.20 perl your-daemon-or-script.pl
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp arm32v5/perl:5.20 perl your-daemon-or-script.pl
 ```
 
 ## Example: Creating a reusable Carton image for Perl projects
 
-Suppose you have a project that uses [Carton](https://metacpan.org/pod/Carton) to manage Perl dependencies. You can create a `perl:carton` image that makes use of the [ONBUILD](https://docs.docker.com/engine/reference/builder/#onbuild) instruction in its `Dockerfile`, like this:
+Suppose you have a project that uses [Carton](https://metacpan.org/pod/Carton) to manage Perl dependencies. You can create a `arm32v5/perl:carton` image that makes use of the [ONBUILD](https://docs.docker.com/engine/reference/builder/#onbuild) instruction in its `Dockerfile`, like this:
 
 ```dockerfile
-FROM perl:5.26
+FROM arm32v5/perl:5.26
 
 RUN cpanm Carton \
     && mkdir -p /usr/src/app
@@ -108,26 +99,12 @@ ONBUILD RUN carton install
 ONBUILD COPY . /usr/src/app
 ```
 
-Then, in your Carton project, you can now reduce your project's `Dockerfile` into a single line of `FROM perl:carton`, which may be enough to build a stand-alone image.
+Then, in your Carton project, you can now reduce your project's `Dockerfile` into a single line of `FROM arm32v5/perl:carton`, which may be enough to build a stand-alone image.
 
-Having a single `perl:carton` base image is useful especially if you have multiple Carton-based projects in development, to avoid "boilerplate" coding of installing Carton and/or copying the project source files into the derived image. Keep in mind, though, about certain things to consider when using the Perl image in this way:
+Having a single `arm32v5/perl:carton` base image is useful especially if you have multiple Carton-based projects in development, to avoid "boilerplate" coding of installing Carton and/or copying the project source files into the derived image. Keep in mind, though, about certain things to consider when using the Perl image in this way:
 
 -	This kind of base image will hide the useful bits (such as the`COPY`/`RUN` above) in the image, separating it from more specific Dockerfiles using the base image. This might lead to confusion when creating further derived images, so be aware of how [ONBUILD triggers](https://docs.docker.com/engine/reference/builder/#onbuild) work and plan appropriately.
 -	There is the cost of maintaining an extra base image build, so if you're working on a single Carton project and/or plan to publish it, then it may be more preferable to derive directly from a versioned `perl` image instead.
-
-# Image Variants
-
-The `perl` images come in many flavors, each designed for a specific use case.
-
-## `perl:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
-
-## `perl:<version>-slim`
-
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `perl`. Unless you are working in an environment where *only* the `perl` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 

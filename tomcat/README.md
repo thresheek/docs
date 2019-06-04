@@ -16,16 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.0.94-jdk8`, `7.0-jdk8`, `7-jdk8`, `7.0.94`, `7.0`, `7` (*7/jdk8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/7/jdk8/Dockerfile)
--	[`7.0.94-jdk8-slim`, `7.0-jdk8-slim`, `7-jdk8-slim`, `7.0.94-slim`, `7.0-slim`, `7-slim` (*7/jdk8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/7/jdk8-slim/Dockerfile)
--	[`8.5.41-jdk8`, `8.5-jdk8`, `8-jdk8`, `jdk8`, `8.5.41`, `8.5`, `8`, `latest` (*8.5/jdk8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/8.5/jdk8/Dockerfile)
--	[`8.5.41-jdk8-slim`, `8.5-jdk8-slim`, `8-jdk8-slim`, `jdk8-slim`, `8.5.41-slim`, `8.5-slim`, `8-slim`, `slim` (*8.5/jdk8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/8.5/jdk8-slim/Dockerfile)
--	[`8.5.41-jdk11`, `8.5-jdk11`, `8-jdk11`, `jdk11` (*8.5/jdk11/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/8.5/jdk11/Dockerfile)
--	[`8.5.41-jdk11-slim`, `8.5-jdk11-slim`, `8-jdk11-slim`, `jdk11-slim` (*8.5/jdk11-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/8.5/jdk11-slim/Dockerfile)
--	[`9.0.20-jdk8`, `9.0-jdk8`, `9-jdk8` (*9.0/jdk8/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/9.0/jdk8/Dockerfile)
--	[`9.0.20-jdk8-slim`, `9.0-jdk8-slim`, `9-jdk8-slim` (*9.0/jdk8-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/9.0/jdk8-slim/Dockerfile)
--	[`9.0.20-jdk11`, `9.0-jdk11`, `9-jdk11`, `9.0.20`, `9.0`, `9` (*9.0/jdk11/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/9.0/jdk11/Dockerfile)
--	[`9.0.20-jdk11-slim`, `9.0-jdk11-slim`, `9-jdk11-slim`, `9.0.20-slim`, `9.0-slim`, `9-slim` (*9.0/jdk11-slim/Dockerfile*)](https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/9.0/jdk11-slim/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `tomcat` does not support the currently selected architecture (`arm32v5`).
 
 # Quick reference
 
@@ -68,13 +61,13 @@ Apache Tomcat (or simply Tomcat) is an open source web server and servlet contai
 Run the default Tomcat server (`CMD ["catalina.sh", "run"]`):
 
 ```console
-$ docker run -it --rm tomcat:8.0
+$ docker run -it --rm arm32v5/tomcat:8.0
 ```
 
 You can test it by visiting `http://container-ip:8080` in a browser or, if you need access outside the host, on port 8888:
 
 ```console
-$ docker run -it --rm -p 8888:8080 tomcat:8.0
+$ docker run -it --rm -p 8888:8080 arm32v5/tomcat:8.0
 ```
 
 You can then go to `http://localhost:8888` or `http://host-ip:8888` in a browser.
@@ -96,18 +89,6 @@ The default Tomcat environment in the image for version 6 is:
 	CLASSPATH:       /usr/local/tomcat/bin/bootstrap.jar
 
 The configuration files are available in `/usr/local/tomcat/conf/`. By default, no user is included in the "manager-gui" role required to operate the "/manager/html" web application. If you wish to use this app, you must define such a user in `tomcat-users.xml`.
-
-# Image Variants
-
-The `tomcat` images come in many flavors, each designed for a specific use case.
-
-## `tomcat:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `tomcat:<version>-slim`
-
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `tomcat`. Unless you are working in an environment where *only* the `tomcat` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
 # License
 

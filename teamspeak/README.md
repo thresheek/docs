@@ -16,7 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.8`, `3.8.0`, `latest` (*alpine/Dockerfile*)](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images/blob/b216589f4f6ffcf84d80a648d5dff314ff9dde45/alpine/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `teamspeak` does not support the currently selected architecture (`arm32v5`).
 
 # Quick reference
 
@@ -59,13 +61,13 @@ TeamSpeak offers the ideal voice communication for online gaming, education and 
 To view the license agreement:
 
 ```console
-$ docker run -e TS3SERVER_LICENSE=view teamspeak
+$ docker run -e TS3SERVER_LICENSE=view arm32v5/teamspeak
 ```
 
 To start a TeamSpeak server, accept the license agreement, and map the ports to the host:
 
 ```console
-$ docker run -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept teamspeak
+$ docker run -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept arm32v5/teamspeak
 ```
 
 Then you can connect to `localhost` in your TeamSpeak client. Please write down the server query password, and server admin privilege key that were generated. These are needed to administrate the TeamSpeak server.
@@ -190,7 +192,7 @@ Path to the `ssh_host_rsa_key` to be used by query. If it does not exist, it wil
 A TeamSpeak server requires a license file when using more then 1 virtual server with 32 slots. For that the licensekey.dat has to be made available to the server. One way is mounting the licensekey.dat into /var/ts3server.
 
 ```console
-$ docker run --name some-teamspeak -v /location/to/licensekey.dat:/var/ts3server/licensekey.dat teamspeak:tag
+$ docker run --name some-teamspeak -v /location/to/licensekey.dat:/var/ts3server/licensekey.dat arm32v5/teamspeak:tag
 ```
 
 When the whole data directory (`/var/ts3server/`) has been mounted somewhere, the `licensekey.dat` can be copied inside that directory and will be loaded after the next restart of the TeamSpeak server.
@@ -208,7 +210,7 @@ The Docker documentation is a good starting point for understanding the differen
 2.	Start your `teamspeak` container like this:
 
 ```console
-$ docker run --name some-teamspeak -v /my/own/datadir:/var/ts3server/ -d teamspeak:tag
+$ docker run --name some-teamspeak -v /my/own/datadir:/var/ts3server/ -d arm32v5/teamspeak:tag
 ```
 
 The `-v /my/own/datadir:/var/ts3server/` part of the command mounts the `/my/own/datadir` directory from the underlying host system as `/var/ts3server` inside the container, where TeamSpeak by default will write its data files.

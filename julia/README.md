@@ -18,23 +18,11 @@ WARNING:
 
 ## Simple Tags
 
--	[`1.1.1-stretch`, `1.1-stretch`, `1-stretch`, `stretch` (*1.1/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/36c40cb93c8ca5c717ab7395a775f5683f176e97/1.1/stretch/Dockerfile)
--	[`1.1.1-windowsservercore-ltsc2016`, `1.1-windowsservercore-ltsc2016`, `1-windowsservercore-ltsc2016`, `windowsservercore-ltsc2016` (*1.1/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/36c40cb93c8ca5c717ab7395a775f5683f176e97/1.1/windows/windowsservercore-ltsc2016/Dockerfile)
--	[`1.1.1-windowsservercore-1803`, `1.1-windowsservercore-1803`, `1-windowsservercore-1803`, `windowsservercore-1803` (*1.1/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/julia/blob/36c40cb93c8ca5c717ab7395a775f5683f176e97/1.1/windows/windowsservercore-1803/Dockerfile)
--	[`1.0.4-stretch`, `1.0-stretch` (*1.0/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/092cb514a9994ee61ae883f53d56ea03c89a3c0c/1.0/stretch/Dockerfile)
--	[`1.0.4-windowsservercore-ltsc2016`, `1.0-windowsservercore-ltsc2016` (*1.0/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/092cb514a9994ee61ae883f53d56ea03c89a3c0c/1.0/windows/windowsservercore-ltsc2016/Dockerfile)
--	[`1.0.4-windowsservercore-1803`, `1.0-windowsservercore-1803` (*1.0/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/julia/blob/092cb514a9994ee61ae883f53d56ea03c89a3c0c/1.0/windows/windowsservercore-1803/Dockerfile)
+
 
 ## Shared Tags
 
--	`1.1.1`, `1.1`, `1`, `latest`:
-	-	[`1.1.1-stretch` (*1.1/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/36c40cb93c8ca5c717ab7395a775f5683f176e97/1.1/stretch/Dockerfile)
-	-	[`1.1.1-windowsservercore-ltsc2016` (*1.1/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/36c40cb93c8ca5c717ab7395a775f5683f176e97/1.1/windows/windowsservercore-ltsc2016/Dockerfile)
-	-	[`1.1.1-windowsservercore-1803` (*1.1/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/julia/blob/36c40cb93c8ca5c717ab7395a775f5683f176e97/1.1/windows/windowsservercore-1803/Dockerfile)
--	`1.0.4`, `1.0`:
-	-	[`1.0.4-stretch` (*1.0/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/092cb514a9994ee61ae883f53d56ea03c89a3c0c/1.0/stretch/Dockerfile)
-	-	[`1.0.4-windowsservercore-ltsc2016` (*1.0/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/092cb514a9994ee61ae883f53d56ea03c89a3c0c/1.0/windows/windowsservercore-ltsc2016/Dockerfile)
-	-	[`1.0.4-windowsservercore-1803` (*1.0/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/julia/blob/092cb514a9994ee61ae883f53d56ea03c89a3c0c/1.0/windows/windowsservercore-1803/Dockerfile)
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/julia/badge/icon) (`arm32v5/julia` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm32v5/job/julia/)
 
 # Quick reference
 
@@ -79,33 +67,14 @@ Julia is a high-level, high-performance dynamic programming language for technic
 Starting the Julia REPL is as easy as the following:
 
 ```console
-$ docker run -it --rm julia
+$ docker run -it --rm arm32v5/julia
 ```
 
 ## Run Julia script from your local directory inside container
 
 ```console
-$ docker run -it --rm -v "$PWD":/usr/myapp -w /usr/myapp julia julia script.jl arg1 arg2
+$ docker run -it --rm -v "$PWD":/usr/myapp -w /usr/myapp arm32v5/julia julia script.jl arg1 arg2
 ```
-
-# Image Variants
-
-The `julia` images come in many flavors, each designed for a specific use case.
-
-## `julia:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-Some of these tags may have names like stretch in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on.
-
-## `julia:<version>-windowsservercore`
-
-This image is based on [Windows Server Core (`microsoft/windowsservercore`)](https://hub.docker.com/r/microsoft/windowsservercore/). As such, it only works in places which that image does, such as Windows 10 Professional/Enterprise (Anniversary Edition) or Windows Server 2016.
-
-For information about how to get Docker running on Windows, please see the relevant "Quick Start" guide provided by Microsoft:
-
--	[Windows Server Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start_windows_server)
--	[Windows 10 Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start_windows_10)
 
 # License
 
