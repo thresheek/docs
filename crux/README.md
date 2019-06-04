@@ -16,8 +16,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.4`, `latest` (*Dockerfile*)](https://github.com/cruxlinux/docker-crux/blob/da081a9004c5559cd77a1e2c2521193ccb2afdd2/Dockerfile)
--	[`3.2` (*Dockerfile*)](https://github.com/cruxlinux/docker-crux/blob/07e966125ba3d6d48a12489830917e8a9bc983a7/Dockerfile)
+-	[`3.4`, `latest` (*Dockerfile*)](https://github.com/cruxlinux/docker-crux/blob/9e26df864d2329a493b30b716ed36314509f0273/Dockerfile)
+-	[`3.2` (*Dockerfile*)](https://github.com/cruxlinux/docker-crux/blob/bd3c44a73d37dc57b3295a3793cb7a6c544bc428/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/crux/badge/icon) (`arm64v8/crux` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/crux/)
 
 # Quick reference
 

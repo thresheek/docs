@@ -18,6 +18,8 @@ WARNING:
 
 -	[`3.6.0`, `latest` (*r-base/Dockerfile*)](https://github.com/rocker-org/rocker/blob/81766dfd355860d733d1cac98f583c2f3aa430ac/r-base/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/r-base/badge/icon) (`arm64v8/r-base` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/r-base/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -67,7 +69,7 @@ R is a GNU project. The source code for the R software environment is written pr
 Launch R directly for interactive work:
 
 ```console
-$ docker run -ti --rm r-base
+$ docker run -ti --rm arm64v8/r-base
 ```
 
 ## Batch mode
@@ -75,13 +77,13 @@ $ docker run -ti --rm r-base
 Link the working directory to run R batch commands. We recommend specifying a non-root user when linking a volume to the container to avoid permission changes, as illustrated here:
 
 ```console
-$ docker run -ti --rm -v "$PWD":/home/docker -w /home/docker -u docker r-base R CMD check .
+$ docker run -ti --rm -v "$PWD":/home/docker -w /home/docker -u docker arm64v8/r-base R CMD check .
 ```
 
 Alternatively, just run a bash session on the container first. This allows a user to run batch commands and also edit and run scripts:
 
 ```console
-$ docker run -ti --rm r-base /usr/bin/bash
+$ docker run -ti --rm arm64v8/r-base /usr/bin/bash
 $ vim.tiny myscript.R
 ```
 
@@ -96,7 +98,7 @@ $ Rscript myscript.R
 Use `r-base` as a base for your own Dockerfiles. For instance, something along the lines of the following will compile and run your project:
 
 ```dockerfile
-FROM r-base
+FROM arm64v8/r-base
 COPY . /usr/local/src/myscripts
 WORKDIR /usr/local/src/myscripts
 CMD ["Rscript", "myscript.R"]

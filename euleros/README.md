@@ -16,10 +16,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.3.1809`, `latest` (*2.3.1809/x86_64//Dockerfile*)](https://github.com/euleros/euleros-docker-images/blob/db22e2c392c3922d2c674110c90667576618f348/2.3.1809/x86_64//Dockerfile)
--	[`2.3.1806` (*2.3.1806/x86_64//Dockerfile*)](https://github.com/euleros/euleros-docker-images/blob/e304245f74141e6e856a017c8d204c27300c1da8/2.3.1806/x86_64//Dockerfile)
--	[`2.3.1803` (*2.3.1803/x86_64//Dockerfile*)](https://github.com/euleros/euleros-docker-images/blob/5afd15edcd49671adefb6dff87537f2943ae1107/2.3.1803/x86_64//Dockerfile)
--	[`2.2` (*2.2/Dockerfile*)](https://github.com/euleros/euleros-docker-images/blob/959f378638f222bd1eebe8dccf267cccbc118174/2.2/Dockerfile)
+-	[`2.3.1809`, `latest` (*2.3.1809/aarch64//Dockerfile*)](https://github.com/euleros/euleros-docker-images/blob/6b013446976a40f497470975238f5d002d9fff30/2.3.1809/aarch64//Dockerfile)
+-	[`2.3.1806` (*2.3.1806/aarch64//Dockerfile*)](https://github.com/euleros/euleros-docker-images/blob/3cc318b6aaaeb3c69c3ee577f06c1a42c20c9ec5/2.3.1806/aarch64//Dockerfile)
+-	[`2.3.1803` (*2.3.1803/aarch64//Dockerfile*)](https://github.com/euleros/euleros-docker-images/blob/319851fa9feead40201cb2a20b6b8b65e0815429/2.3.1803/aarch64//Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/euleros/badge/icon) (`arm64v8/euleros` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/euleros/)
 
 # Quick reference
 

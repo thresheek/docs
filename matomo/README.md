@@ -20,6 +20,8 @@ WARNING:
 -	[`3.9.1-fpm`, `3.9-fpm`, `3-fpm`, `fpm` (*fpm/Dockerfile*)](https://github.com/matomo-org/docker/blob/2125140c0481fa39e5f1add28bcc45fd9f36e75e/fpm/Dockerfile)
 -	[`3.9.1-fpm-alpine`, `3.9-fpm-alpine`, `3-fpm-alpine`, `fpm-alpine` (*fpm-alpine/Dockerfile*)](https://github.com/matomo-org/docker/blob/2125140c0481fa39e5f1add28bcc45fd9f36e75e/fpm-alpine/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/matomo/badge/icon) (`arm64v8/matomo` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/matomo/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -111,13 +113,13 @@ This product includes GeoLite data created by MaxMind, available from [http://ww
 
 # Image Variants
 
-The `matomo` images come in many flavors, each designed for a specific use case.
+The `arm64v8/matomo` images come in many flavors, each designed for a specific use case.
 
-## `matomo:<version>`
+## `arm64v8/matomo:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `matomo:<version>-alpine`
+## `arm64v8/matomo:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
