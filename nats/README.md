@@ -18,15 +18,15 @@ WARNING:
 
 ## Simple Tags
 
--	[`1.4.1-linux`, `linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/349eabff215ee6b068f46d34df378aba52790805/amd64/Dockerfile)
 -	[`1.4.1-nanoserver`, `nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/349eabff215ee6b068f46d34df378aba52790805/windows/nanoserver/Dockerfile)
 -	[`1.4.1-windowsservercore`, `windowsservercore` (*windows/windowsservercore/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/349eabff215ee6b068f46d34df378aba52790805/windows/windowsservercore/Dockerfile)
 
 ## Shared Tags
 
 -	`1.4.1`, `latest`:
-	-	[`1.4.1-linux` (*amd64/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/349eabff215ee6b068f46d34df378aba52790805/amd64/Dockerfile)
 	-	[`1.4.1-nanoserver` (*windows/nanoserver/Dockerfile*)](https://github.com/nats-io/nats-docker/blob/349eabff215ee6b068f46d34df378aba52790805/windows/nanoserver/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/nats/badge/icon) (`winamd64/nats` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/nats/)
 
 # Quick reference
 
@@ -79,15 +79,15 @@ WARNING:
 # For instance, to run the NATS Server and have it listen on port 4444,
 # you would have to run like this:
 #
-#   docker run -p 4444:4444 nats -p 4444
+#   docker run -p 4444:4444 winamd64/nats -p 4444
 #
 # Or, if you want to publish the port 4444 as a different port, for example 5555:
 #
-#   docker run -p 5555:4444 nats -p 4444
+#   docker run -p 5555:4444 winamd64/nats -p 4444
 #
 # Check "docker run" for more information.
 
-$ docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
+$ docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 winamd64/nats
 [INF] Starting nats-server version 1.4.1
 [INF] Git commit [ce2df36]
 [INF] Starting http monitor on 0.0.0.0:8222
@@ -101,10 +101,10 @@ $ docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
 # Note that since you are passing arguments, this overrides the CMD section
 # of the Dockerfile, so you need to pass all arguments, including the
 # config file.
-$ docker run -d --name=nats-2 --link nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222
+$ docker run -d --name=nats-2 --link nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 winamd64/nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222
 
 # If you want to verify the routes are connected, try this instead:
-$ docker run -d --name=nats-2 --link nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222 -DV
+$ docker run -d --name=nats-2 --link nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 winamd64/nats -c gnatsd.conf --routes=nats-route://ruser:T0pS3cr3t@nats-main:6222 -DV
 [INF] Starting nats-server version 1.4.1
 [DBG] Go build version go1.11.4
 [INF] Git commit [ce2df36]
@@ -203,13 +203,13 @@ Common Options:
 
 # Image Variants
 
-The `nats` images come in many flavors, each designed for a specific use case.
+The `winamd64/nats` images come in many flavors, each designed for a specific use case.
 
-## `nats:<version>`
+## `winamd64/nats:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `nats:<version>-windowsservercore`
+## `winamd64/nats:<version>-windowsservercore`
 
 This image is based on [Windows Server Core (`microsoft/windowsservercore`)](https://hub.docker.com/r/microsoft/windowsservercore/). As such, it only works in places which that image does, such as Windows 10 Professional/Enterprise (Anniversary Edition) or Windows Server 2016.
 

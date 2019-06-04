@@ -16,18 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.2.1-php7.1-apache`, `5.2-php7.1-apache`, `5-php7.1-apache`, `php7.1-apache`, `5.2.1-php7.1`, `5.2-php7.1`, `5-php7.1`, `php7.1` (*php7.1/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.1/apache/Dockerfile)
--	[`5.2.1-php7.1-fpm`, `5.2-php7.1-fpm`, `5-php7.1-fpm`, `php7.1-fpm` (*php7.1/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.1/fpm/Dockerfile)
--	[`5.2.1-php7.1-fpm-alpine`, `5.2-php7.1-fpm-alpine`, `5-php7.1-fpm-alpine`, `php7.1-fpm-alpine` (*php7.1/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.1/fpm-alpine/Dockerfile)
--	[`5.2.1-php7.2-apache`, `5.2-php7.2-apache`, `5-php7.2-apache`, `php7.2-apache`, `5.2.1-php7.2`, `5.2-php7.2`, `5-php7.2`, `php7.2` (*php7.2/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.2/apache/Dockerfile)
--	[`5.2.1-php7.2-fpm`, `5.2-php7.2-fpm`, `5-php7.2-fpm`, `php7.2-fpm` (*php7.2/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.2/fpm/Dockerfile)
--	[`5.2.1-php7.2-fpm-alpine`, `5.2-php7.2-fpm-alpine`, `5-php7.2-fpm-alpine`, `php7.2-fpm-alpine` (*php7.2/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.2/fpm-alpine/Dockerfile)
--	[`5.2.1-apache`, `5.2-apache`, `5-apache`, `apache`, `5.2.1`, `5.2`, `5`, `latest`, `5.2.1-php7.3-apache`, `5.2-php7.3-apache`, `5-php7.3-apache`, `php7.3-apache`, `5.2.1-php7.3`, `5.2-php7.3`, `5-php7.3`, `php7.3` (*php7.3/apache/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.3/apache/Dockerfile)
--	[`5.2.1-fpm`, `5.2-fpm`, `5-fpm`, `fpm`, `5.2.1-php7.3-fpm`, `5.2-php7.3-fpm`, `5-php7.3-fpm`, `php7.3-fpm` (*php7.3/fpm/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.3/fpm/Dockerfile)
--	[`5.2.1-fpm-alpine`, `5.2-fpm-alpine`, `5-fpm-alpine`, `fpm-alpine`, `5.2.1-php7.3-fpm-alpine`, `5.2-php7.3-fpm-alpine`, `5-php7.3-fpm-alpine`, `php7.3-fpm-alpine` (*php7.3/fpm-alpine/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.3/fpm-alpine/Dockerfile)
--	[`cli-2.2.0-php7.1`, `cli-2.2-php7.1`, `cli-2-php7.1`, `cli-php7.1` (*php7.1/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.1/cli/Dockerfile)
--	[`cli-2.2.0-php7.2`, `cli-2.2-php7.2`, `cli-2-php7.2`, `cli-php7.2` (*php7.2/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.2/cli/Dockerfile)
--	[`cli-2.2.0`, `cli-2.2`, `cli-2`, `cli`, `cli-2.2.0-php7.3`, `cli-2.2-php7.3`, `cli-2-php7.3`, `cli-php7.3` (*php7.3/cli/Dockerfile*)](https://github.com/docker-library/wordpress/blob/9ee913eea382b5d79f852a2301d4390904d2e4d2/php7.3/cli/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `wordpress` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -68,7 +59,7 @@ WordPress is a free and open source blogging tool and a content management syste
 # How to use this image
 
 ```console
-$ docker run --name some-wordpress --network some-network -d wordpress
+$ docker run --name some-wordpress --network some-network -d winamd64/wordpress
 ```
 
 The following environment variables are also honored for configuring your WordPress instance:
@@ -87,7 +78,7 @@ If the `WORDPRESS_DB_NAME` specified does not already exist on the given MySQL s
 If you'd like to be able to access the instance from the host without the container's IP, standard port mappings can be used:
 
 ```console
-$ docker run --name some-wordpress -p 8080:80 -d wordpress
+$ docker run --name some-wordpress -p 8080:80 -d winamd64/wordpress
 ```
 
 Then, access it via `http://localhost:8080` or `http://host-ip:8080` in a browser.
@@ -96,7 +87,7 @@ If you'd like to use an external database instead of a `mysql` container, specif
 
 ```console
 $ docker run --name some-wordpress -e WORDPRESS_DB_HOST=10.1.2.3:3306 \
-    -e WORDPRESS_DB_USER=... -e WORDPRESS_DB_PASSWORD=... -d wordpress
+    -e WORDPRESS_DB_USER=... -e WORDPRESS_DB_PASSWORD=... -d winamd64/wordpress
 ```
 
 When running WordPress with TLS behind a reverse proxy such as NGINX which is responsible for doing TLS termination, be sure to set `X-Forwarded-Proto` appropriately (see ["Using a Reverse Proxy" in "Administration Over SSL" in upstream's documentation](https://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy)). No additional environment variables or configuration should be necessary (this image automatically adds the noted `HTTP_X_FORWARDED_PROTO` code to `wp-config.php` if *any* of the above-noted environment variables are specified).
@@ -108,7 +99,7 @@ If your database requires SSL, [WordPress ticket #28625](https://core.trac.wordp
 As an alternative to passing sensitive information via environment variables, `_FILE` may be appended to the previously listed environment variables, causing the initialization script to load the values for those variables from files present in the container. In particular, this can be used to load passwords from Docker secrets stored in `/run/secrets/<secret_name>` files. For example:
 
 ```console
-$ docker run --name some-wordpress -e WORDPRESS_DB_PASSWORD_FILE=/run/secrets/mysql-root ... -d wordpress:tag
+$ docker run --name some-wordpress -e WORDPRESS_DB_PASSWORD_FILE=/run/secrets/mysql-root ... -d winamd64/wordpress:tag
 ```
 
 Currently, this is supported for `WORDPRESS_DB_HOST`, `WORDPRESS_DB_USER`, `WORDPRESS_DB_PASSWORD`, `WORDPRESS_DB_NAME`, `WORDPRESS_AUTH_KEY`, `WORDPRESS_SECURE_AUTH_KEY`, `WORDPRESS_LOGGED_IN_KEY`, `WORDPRESS_NONCE_KEY`, `WORDPRESS_AUTH_SALT`, `WORDPRESS_SECURE_AUTH_SALT`, `WORDPRESS_LOGGED_IN_SALT`, `WORDPRESS_NONCE_SALT`, `WORDPRESS_TABLE_PREFIX`, and `WORDPRESS_DEBUG`.
@@ -168,38 +159,7 @@ Mount the volume containing your themes or plugins to the proper directory; and 
 
 See [the "Running as an arbitrary user" section of the `php` image documentation](https://hub.docker.com/_/php/).
 
-When running WP-CLI via the `cli` variants of this image, it is important to note that they're based on Alpine, and have a default `USER` of Alpine's `www-data`, whose UID is `82` (compared to the Debian-based WordPress variants whose default effective UID is `33`), so when running `wordpress:cli` against an existing Debian-based WordPress install, something like `--user 33:33` is likely going to be necessary. See [docker-library/wordpress#256](https://github.com/docker-library/wordpress/issues/256) for more discussion around this.
-
-# Image Variants
-
-The `wordpress` images come in many flavors, each designed for a specific use case.
-
-## `wordpress:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `wordpress:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
-
-## `wordpress:cli`
-
-This image variant does not contain WordPress itself, but instead contains [WP-CLI](https://wp-cli.org).
-
-The simplest way to use it with an existing WordPress container would be something similar to the following:
-
-```console
-$ docker run -it --rm \
-	--volumes-from some-wordpress \
-	--network container:some-wordpress \
-	wordpress:cli user list
-```
-
-Generally speaking, for WP-CLI to interact with a WordPress install, it needs access to the on-disk files of the WordPress install, and access to the database (and the easiest way to accomplish that such that `wp-config.php` does not require changes is to simply join the networking context of the existing and presumably working WordPress container, but there are many other ways to accomplish that which will be left as an exercise for the reader).
+When running WP-CLI via the `cli` variants of this image, it is important to note that they're based on Alpine, and have a default `USER` of Alpine's `www-data`, whose UID is `82` (compared to the Debian-based WordPress variants whose default effective UID is `33`), so when running `winamd64/wordpress:cli` against an existing Debian-based WordPress install, something like `--user 33:33` is likely going to be necessary. See [docker-library/wordpress#256](https://github.com/docker-library/wordpress/issues/256) for more discussion around this.
 
 # License
 

@@ -16,7 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`0.4.0`, `0.4`, `0`, `latest` (*arches/amd64/Dockerfile*)](https://github.com/tianon/docker-brew-cirros/blob/d04ffb350eb29c24bafe12f6b109aa3990309771/arches/amd64/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `cirros` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 

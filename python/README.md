@@ -18,40 +18,15 @@ WARNING:
 
 ## Simple Tags
 
--	[`3.8.0a4-stretch`, `3.8-rc-stretch`, `rc-stretch` (*3.8-rc/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/stretch/Dockerfile)
--	[`3.8.0a4-slim-stretch`, `3.8-rc-slim-stretch`, `rc-slim-stretch`, `3.8.0a4-slim`, `3.8-rc-slim`, `rc-slim` (*3.8-rc/stretch/slim/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/stretch/slim/Dockerfile)
--	[`3.8.0a4-alpine3.9`, `3.8-rc-alpine3.9`, `rc-alpine3.9`, `3.8.0a4-alpine`, `3.8-rc-alpine`, `rc-alpine` (*3.8-rc/alpine3.9/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/alpine3.9/Dockerfile)
 -	[`3.8.0a4-windowsservercore-ltsc2016`, `3.8-rc-windowsservercore-ltsc2016`, `rc-windowsservercore-ltsc2016` (*3.8-rc/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-ltsc2016/Dockerfile)
 -	[`3.8.0a4-windowsservercore-1803`, `3.8-rc-windowsservercore-1803`, `rc-windowsservercore-1803` (*3.8-rc/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-1803/Dockerfile)
 -	[`3.8.0a4-windowsservercore-1809`, `3.8-rc-windowsservercore-1809`, `rc-windowsservercore-1809` (*3.8-rc/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-1809/Dockerfile)
--	[`3.7.3-stretch`, `3.7-stretch`, `3-stretch`, `stretch` (*3.7/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/stretch/Dockerfile)
--	[`3.7.3-slim-stretch`, `3.7-slim-stretch`, `3-slim-stretch`, `slim-stretch`, `3.7.3-slim`, `3.7-slim`, `3-slim`, `slim` (*3.7/stretch/slim/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/stretch/slim/Dockerfile)
--	[`3.7.3-alpine3.9`, `3.7-alpine3.9`, `3-alpine3.9`, `alpine3.9`, `3.7.3-alpine`, `3.7-alpine`, `3-alpine`, `alpine` (*3.7/alpine3.9/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/alpine3.9/Dockerfile)
--	[`3.7.3-alpine3.8`, `3.7-alpine3.8`, `3-alpine3.8`, `alpine3.8` (*3.7/alpine3.8/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/alpine3.8/Dockerfile)
 -	[`3.7.3-windowsservercore-ltsc2016`, `3.7-windowsservercore-ltsc2016`, `3-windowsservercore-ltsc2016`, `windowsservercore-ltsc2016` (*3.7/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-ltsc2016/Dockerfile)
 -	[`3.7.3-windowsservercore-1803`, `3.7-windowsservercore-1803`, `3-windowsservercore-1803`, `windowsservercore-1803` (*3.7/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-1803/Dockerfile)
 -	[`3.7.3-windowsservercore-1809`, `3.7-windowsservercore-1809`, `3-windowsservercore-1809`, `windowsservercore-1809` (*3.7/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-1809/Dockerfile)
--	[`3.6.8-stretch`, `3.6-stretch` (*3.6/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/stretch/Dockerfile)
--	[`3.6.8-slim-stretch`, `3.6-slim-stretch`, `3.6.8-slim`, `3.6-slim` (*3.6/stretch/slim/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/stretch/slim/Dockerfile)
--	[`3.6.8-jessie`, `3.6-jessie` (*3.6/jessie/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/jessie/Dockerfile)
--	[`3.6.8-slim-jessie`, `3.6-slim-jessie` (*3.6/jessie/slim/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/jessie/slim/Dockerfile)
--	[`3.6.8-alpine3.9`, `3.6-alpine3.9`, `3.6.8-alpine`, `3.6-alpine` (*3.6/alpine3.9/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/alpine3.9/Dockerfile)
--	[`3.6.8-alpine3.8`, `3.6-alpine3.8` (*3.6/alpine3.8/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/alpine3.8/Dockerfile)
 -	[`3.6.8-windowsservercore-ltsc2016`, `3.6-windowsservercore-ltsc2016` (*3.6/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-ltsc2016/Dockerfile)
 -	[`3.6.8-windowsservercore-1803`, `3.6-windowsservercore-1803` (*3.6/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-1803/Dockerfile)
 -	[`3.6.8-windowsservercore-1809`, `3.6-windowsservercore-1809` (*3.6/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-1809/Dockerfile)
--	[`3.5.7-stretch`, `3.5-stretch` (*3.5/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/f233f51a2f14acee632669b56767c1cc229d2747/3.5/stretch/Dockerfile)
--	[`3.5.7-slim-stretch`, `3.5-slim-stretch`, `3.5.7-slim`, `3.5-slim` (*3.5/stretch/slim/Dockerfile*)](https://github.com/docker-library/python/blob/f233f51a2f14acee632669b56767c1cc229d2747/3.5/stretch/slim/Dockerfile)
--	[`3.5.7-jessie`, `3.5-jessie` (*3.5/jessie/Dockerfile*)](https://github.com/docker-library/python/blob/f233f51a2f14acee632669b56767c1cc229d2747/3.5/jessie/Dockerfile)
--	[`3.5.7-slim-jessie`, `3.5-slim-jessie` (*3.5/jessie/slim/Dockerfile*)](https://github.com/docker-library/python/blob/f233f51a2f14acee632669b56767c1cc229d2747/3.5/jessie/slim/Dockerfile)
--	[`3.5.7-alpine3.9`, `3.5-alpine3.9`, `3.5.7-alpine`, `3.5-alpine` (*3.5/alpine3.9/Dockerfile*)](https://github.com/docker-library/python/blob/f233f51a2f14acee632669b56767c1cc229d2747/3.5/alpine3.9/Dockerfile)
--	[`3.5.7-alpine3.8`, `3.5-alpine3.8` (*3.5/alpine3.8/Dockerfile*)](https://github.com/docker-library/python/blob/f233f51a2f14acee632669b56767c1cc229d2747/3.5/alpine3.8/Dockerfile)
--	[`2.7.16-stretch`, `2.7-stretch`, `2-stretch` (*2.7/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/stretch/Dockerfile)
--	[`2.7.16-slim-stretch`, `2.7-slim-stretch`, `2-slim-stretch`, `2.7.16-slim`, `2.7-slim`, `2-slim` (*2.7/stretch/slim/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/stretch/slim/Dockerfile)
--	[`2.7.16-jessie`, `2.7-jessie`, `2-jessie` (*2.7/jessie/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/jessie/Dockerfile)
--	[`2.7.16-slim-jessie`, `2.7-slim-jessie`, `2-slim-jessie` (*2.7/jessie/slim/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/jessie/slim/Dockerfile)
--	[`2.7.16-alpine3.9`, `2.7-alpine3.9`, `2-alpine3.9`, `2.7.16-alpine`, `2.7-alpine`, `2-alpine` (*2.7/alpine3.9/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/alpine3.9/Dockerfile)
--	[`2.7.16-alpine3.8`, `2.7-alpine3.8`, `2-alpine3.8` (*2.7/alpine3.8/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/alpine3.8/Dockerfile)
 -	[`2.7.16-windowsservercore-ltsc2016`, `2.7-windowsservercore-ltsc2016`, `2-windowsservercore-ltsc2016` (*2.7/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-ltsc2016/Dockerfile)
 -	[`2.7.16-windowsservercore-1803`, `2.7-windowsservercore-1803`, `2-windowsservercore-1803` (*2.7/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-1803/Dockerfile)
 -	[`2.7.16-windowsservercore-1809`, `2.7-windowsservercore-1809`, `2-windowsservercore-1809` (*2.7/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-1809/Dockerfile)
@@ -59,7 +34,6 @@ WARNING:
 ## Shared Tags
 
 -	`3.8.0a4`, `3.8-rc`, `rc`:
-	-	[`3.8.0a4-stretch` (*3.8-rc/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/stretch/Dockerfile)
 	-	[`3.8.0a4-windowsservercore-ltsc2016` (*3.8-rc/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`3.8.0a4-windowsservercore-1803` (*3.8-rc/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-1803/Dockerfile)
 	-	[`3.8.0a4-windowsservercore-1809` (*3.8-rc/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-1809/Dockerfile)
@@ -68,7 +42,6 @@ WARNING:
 	-	[`3.8.0a4-windowsservercore-1803` (*3.8-rc/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-1803/Dockerfile)
 	-	[`3.8.0a4-windowsservercore-1809` (*3.8-rc/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/f6e98ea8b8ef4e9a520e05d481d2640a35f9542c/3.8-rc/windows/windowsservercore-1809/Dockerfile)
 -	`3.7.3`, `3.7`, `3`, `latest`:
-	-	[`3.7.3-stretch` (*3.7/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/stretch/Dockerfile)
 	-	[`3.7.3-windowsservercore-ltsc2016` (*3.7/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`3.7.3-windowsservercore-1803` (*3.7/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-1803/Dockerfile)
 	-	[`3.7.3-windowsservercore-1809` (*3.7/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-1809/Dockerfile)
@@ -77,7 +50,6 @@ WARNING:
 	-	[`3.7.3-windowsservercore-1803` (*3.7/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-1803/Dockerfile)
 	-	[`3.7.3-windowsservercore-1809` (*3.7/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/34c9df35e9a69e9f0edde88e861b543edb8bc07a/3.7/windows/windowsservercore-1809/Dockerfile)
 -	`3.6.8`, `3.6`:
-	-	[`3.6.8-stretch` (*3.6/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/stretch/Dockerfile)
 	-	[`3.6.8-windowsservercore-ltsc2016` (*3.6/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`3.6.8-windowsservercore-1803` (*3.6/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-1803/Dockerfile)
 	-	[`3.6.8-windowsservercore-1809` (*3.6/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-1809/Dockerfile)
@@ -85,10 +57,7 @@ WARNING:
 	-	[`3.6.8-windowsservercore-ltsc2016` (*3.6/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`3.6.8-windowsservercore-1803` (*3.6/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-1803/Dockerfile)
 	-	[`3.6.8-windowsservercore-1809` (*3.6/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/4df129649329186fb42c9c33215b41d82bc0e58e/3.6/windows/windowsservercore-1809/Dockerfile)
--	`3.5.7`, `3.5`:
-	-	[`3.5.7-stretch` (*3.5/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/f233f51a2f14acee632669b56767c1cc229d2747/3.5/stretch/Dockerfile)
 -	`2.7.16`, `2.7`, `2`:
-	-	[`2.7.16-stretch` (*2.7/stretch/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/stretch/Dockerfile)
 	-	[`2.7.16-windowsservercore-ltsc2016` (*2.7/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`2.7.16-windowsservercore-1803` (*2.7/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-1803/Dockerfile)
 	-	[`2.7.16-windowsservercore-1809` (*2.7/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-1809/Dockerfile)
@@ -96,6 +65,8 @@ WARNING:
 	-	[`2.7.16-windowsservercore-ltsc2016` (*2.7/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`2.7.16-windowsservercore-1803` (*2.7/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-1803/Dockerfile)
 	-	[`2.7.16-windowsservercore-1809` (*2.7/windows/windowsservercore-1809/Dockerfile*)](https://github.com/docker-library/python/blob/00dfb8462f6b3fca152d46b20c0d3b70e8c7ff5b/2.7/windows/windowsservercore-1809/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/python/badge/icon) (`winamd64/python` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/python/)
 
 # Quick reference
 
@@ -138,7 +109,7 @@ Python is an interpreted, interactive, object-oriented, open-source programming 
 ## Create a `Dockerfile` in your Python app project
 
 ```dockerfile
-FROM python:3
+FROM winamd64/python:3
 
 WORKDIR /usr/src/app
 
@@ -153,7 +124,7 @@ CMD [ "python", "./your-daemon-or-script.py" ]
 or (if you need to use Python 2):
 
 ```dockerfile
-FROM python:2
+FROM winamd64/python:2
 
 WORKDIR /usr/src/app
 
@@ -177,40 +148,26 @@ $ docker run -it --rm --name my-running-app my-python-app
 For many simple, single file projects, you may find it inconvenient to write a complete `Dockerfile`. In such cases, you can run a Python script by using the Python Docker image directly:
 
 ```console
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 python your-daemon-or-script.py
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp winamd64/python:3 python your-daemon-or-script.py
 ```
 
 or (again, if you need to use Python 2):
 
 ```console
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:2 python your-daemon-or-script.py
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp winamd64/python:2 python your-daemon-or-script.py
 ```
 
 # Image Variants
 
-The `python` images come in many flavors, each designed for a specific use case.
+The `winamd64/python` images come in many flavors, each designed for a specific use case.
 
-## `python:<version>`
+## `winamd64/python:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
 This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
 
-Some of these tags may have names like jessie or stretch in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on.
-
-## `python:<version>-slim`
-
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `python`. Unless you are working in an environment where *only* the `python` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
-
-## `python:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
-
-## `python:<version>-windowsservercore`
+## `winamd64/python:<version>-windowsservercore`
 
 This image is based on [Windows Server Core (`microsoft/windowsservercore`)](https://hub.docker.com/r/microsoft/windowsservercore/). As such, it only works in places which that image does, such as Windows 10 Professional/Enterprise (Anniversary Edition) or Windows Server 2016.
 

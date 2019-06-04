@@ -16,10 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.1.5`, `5.1`, `5`, `latest` (*5.1/5.1.5/debian/Dockerfile*)](https://github.com/plone/plone.docker/blob/ef1fcdb9f366abaf1e55647f037a19bd867a4da3/5.1/5.1.5/debian/Dockerfile)
--	[`5.1.5-alpine`, `5.1-alpine`, `5-alpine`, `alpine` (*5.1/5.1.5/alpine/Dockerfile*)](https://github.com/plone/plone.docker/blob/ef1fcdb9f366abaf1e55647f037a19bd867a4da3/5.1/5.1.5/alpine/Dockerfile)
--	[`4.3.18`, `4.3`, `4` (*4.3/4.3.18/debian/Dockerfile*)](https://github.com/plone/plone.docker/blob/4a429ec549ecea264e7c345e435b6805cc61887b/4.3/4.3.18/debian/Dockerfile)
--	[`4.3.18-alpine`, `4.3-alpine`, `4-alpine` (*4.3/4.3.18/alpine/Dockerfile*)](https://github.com/plone/plone.docker/blob/4a429ec549ecea264e7c345e435b6805cc61887b/4.3/4.3.18/alpine/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `plone` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -68,7 +67,7 @@ WARNING:
 This will download and start the latest Plone 5 container, based on [Debian](https://www.debian.org/).
 
 ```console
-$ docker run -p 8080:8080 plone
+$ docker run -p 8080:8080 winamd64/plone
 ```
 
 This image includes `EXPOSE 8080` (the Plone port), so standard container linking will make it automatically available to the linked containers. Now you can add a Plone Site at http://localhost:8080 - default Zope user and password are `admin/admin`.
@@ -80,14 +79,14 @@ ZEO cluster are best suited for production setups, you will **need** a loadbalan
 Start ZEO server in the background
 
 ```console
-$ docker run --name=zeo plone zeo
+$ docker run --name=zeo winamd64/plone zeo
 ```
 
 Start 2 Plone clients (also in the background)
 
 ```console
-$ docker run --link=zeo -e ZEO_ADDRESS=zeo:8080 -p 8081:8080 plone
-$ docker run --link=zeo -e ZEO_ADDRESS=zeo:8080 -p 8082:8080 plone
+$ docker run --link=zeo -e ZEO_ADDRESS=zeo:8080 -p 8081:8080 winamd64/plone
+$ docker run --link=zeo -e ZEO_ADDRESS=zeo:8080 -p 8082:8080 winamd64/plone
 ```
 
 ### Start Plone in debug mode
@@ -95,7 +94,7 @@ $ docker run --link=zeo -e ZEO_ADDRESS=zeo:8080 -p 8082:8080 plone
 You can also start Plone in debug mode (`fg`) by running
 
 ```console
-$ docker run -p 8080:8080 plone fg
+$ docker run -p 8080:8080 winamd64/plone fg
 ```
 
 ### Add-ons
@@ -103,7 +102,7 @@ $ docker run -p 8080:8080 plone fg
 You can enable Plone add-ons via the `ADDONS` environment variable
 
 ```console
-$ docker run -p 8080:8080 -e PLONE_ADDONS="eea.facetednavigation Products.PloneFormGen" plone
+$ docker run -p 8080:8080 -e PLONE_ADDONS="eea.facetednavigation Products.PloneFormGen" winamd64/plone
 ```
 
 For more information on how to extend this image with your own custom settings, adding more add-ons, building it or mounting volumes, please refer to our [documentation](https://docs.plone.org/manage/docker/docs/index.html)
@@ -152,22 +151,6 @@ Full documentation for end users can be found online at [docs.plone.org](https:/
 This docker image was originally financed by the [European Environment Agency](http://eea.europa.eu), an agency of the European Union.
 
 Thanks to [Antonio De Marinis](https://github.com/demarant), [Sven Strack](https://github.com/svx) and [Alin Voinea](https://github.com/avoinea) for their preliminary work.
-
-# Image Variants
-
-The `plone` images come in many flavors, each designed for a specific use case.
-
-## `plone:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `plone:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

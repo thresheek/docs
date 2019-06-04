@@ -16,15 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.9.6-apache`, `3.9-apache`, `3-apache`, `apache`, `3.9.6`, `3.9`, `3`, `latest`, `3.9.6-php7.1-apache`, `3.9-php7.1-apache`, `3-php7.1-apache`, `php7.1-apache`, `3.9.6-php7.1`, `3.9-php7.1`, `3-php7.1`, `php7.1` (*php7.1/apache/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.1/apache/Dockerfile)
--	[`3.9.6-fpm`, `3.9-fpm`, `3-fpm`, `fpm`, `3.9.6-php7.1-fpm`, `3.9-php7.1-fpm`, `3-php7.1-fpm`, `php7.1-fpm` (*php7.1/fpm/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.1/fpm/Dockerfile)
--	[`3.9.6-fpm-alpine`, `3.9-fpm-alpine`, `3-fpm-alpine`, `fpm-alpine`, `3.9.6-php7.1-fpm-alpine`, `3.9-php7.1-fpm-alpine`, `3-php7.1-fpm-alpine`, `php7.1-fpm-alpine` (*php7.1/fpm-alpine/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.1/fpm-alpine/Dockerfile)
--	[`3.9.6-php7.2-apache`, `3.9-php7.2-apache`, `3-php7.2-apache`, `php7.2-apache`, `3.9.6-php7.2`, `3.9-php7.2`, `3-php7.2`, `php7.2` (*php7.2/apache/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.2/apache/Dockerfile)
--	[`3.9.6-php7.2-fpm`, `3.9-php7.2-fpm`, `3-php7.2-fpm`, `php7.2-fpm` (*php7.2/fpm/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.2/fpm/Dockerfile)
--	[`3.9.6-php7.2-fpm-alpine`, `3.9-php7.2-fpm-alpine`, `3-php7.2-fpm-alpine`, `php7.2-fpm-alpine` (*php7.2/fpm-alpine/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.2/fpm-alpine/Dockerfile)
--	[`3.9.6-php7.3-apache`, `3.9-php7.3-apache`, `3-php7.3-apache`, `php7.3-apache`, `3.9.6-php7.3`, `3.9-php7.3`, `3-php7.3`, `php7.3` (*php7.3/apache/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.3/apache/Dockerfile)
--	[`3.9.6-php7.3-fpm`, `3.9-php7.3-fpm`, `3-php7.3-fpm`, `php7.3-fpm` (*php7.3/fpm/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.3/fpm/Dockerfile)
--	[`3.9.6-php7.3-fpm-alpine`, `3.9-php7.3-fpm-alpine`, `3-php7.3-fpm-alpine`, `php7.3-fpm-alpine` (*php7.3/fpm-alpine/Dockerfile*)](https://github.com/joomla/docker-joomla/blob/782d471208fc1a0bf0ff9cf56467ecc697eb8d7e/php7.3/fpm-alpine/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `joomla` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -65,7 +59,7 @@ Joomla is a free and open-source content management system (CMS) for publishing 
 # How to use this image
 
 ```console
-$ docker run --name some-joomla --link some-mysql:mysql -d joomla
+$ docker run --name some-joomla --link some-mysql:mysql -d winamd64/joomla
 ```
 
 The following environment variables are also honored for configuring your Joomla instance:
@@ -80,7 +74,7 @@ If the `JOOMLA_DB_NAME` specified does not already exist on the given MySQL serv
 If you'd like to be able to access the instance from the host without the container's IP, standard port mappings can be used:
 
 ```console
-$ docker run --name some-joomla --link some-mysql:mysql -p 8080:80 -d joomla
+$ docker run --name some-joomla --link some-mysql:mysql -p 8080:80 -d winamd64/joomla
 ```
 
 Then, access it via `http://localhost:8080` or `http://host-ip:8080` in a browser.
@@ -131,22 +125,6 @@ If you need additional PHP extensions, you'll need to create your own image `FRO
 The following Docker Hub features can help with the task of keeping your dependent images up-to-date:
 
 -	[Automated Builds](https://docs.docker.com/docker-hub/builds/) let Docker Hub automatically build your Dockerfile each time you push changes to it.
-
-# Image Variants
-
-The `joomla` images come in many flavors, each designed for a specific use case.
-
-## `joomla:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `joomla:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

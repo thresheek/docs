@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.6.5`, `8.6`, `8`, `latest` (*8.6/Dockerfile*)](https://github.com/freebroccolo/docker-haskell/blob/7fd359b8dab3bf543832eb1ff34e1a46eef262a7/8.6/Dockerfile)
--	[`8.4.4`, `8.4` (*8.4/Dockerfile*)](https://github.com/freebroccolo/docker-haskell/blob/03467e1a14543d83d33833e669249a3c42f7b7c8/8.4/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `haskell` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -68,7 +69,7 @@ Note: The GHC developers do not support legacy release branches (i.e. `7.8.x`). 
 Start an interactive interpreter session with `ghci`:
 
 ```console
-$ docker run -it --rm haskell:8
+$ docker run -it --rm winamd64/haskell:8
 GHCi, version 8.4.3: http://www.haskell.org/ghc/  :? for help
 Prelude>
 ```
@@ -76,7 +77,7 @@ Prelude>
 Dockerize an application from Hackage with a `Dockerfile`:
 
 ```dockerfile
-FROM haskell:8
+FROM winamd64/haskell:8
 RUN stack install pandoc pandoc-citeproc
 ENTRYPOINT ["pandoc"]
 ```
@@ -84,7 +85,7 @@ ENTRYPOINT ["pandoc"]
 Alternatively, using `cabal`:
 
 ```dockerfile
-FROM haskell:8
+FROM winamd64/haskell:8
 RUN cabal update && cabal install pandoc pandoc-citeproc
 ENTRYPOINT ["pandoc"]
 ```
@@ -92,7 +93,7 @@ ENTRYPOINT ["pandoc"]
 Iteratively develop a Haskell application with a `Dockerfile` utilizing the build cache:
 
 ```dockerfile
-FROM haskell:7.10
+FROM winamd64/haskell:7.10
 
 WORKDIR /opt/server
 
@@ -119,7 +120,7 @@ See the application snippet above in more detail in the [example snap applicatio
 
 ### Considerations for `happy`, `alex`, etc
 
-Some packages that also act as build dependencies, such as `happy` and `alex`, are no longer included in this image (as of `haskell:8.2.2` & `haskell:8.4.3`). There is a bootstrapping problem where one or more of these tools may be assumed to be available. If you run in to an error about missing dependencies that are not explicitly called out in a Cabal package, you will need to explicitly mark them for installation.
+Some packages that also act as build dependencies, such as `happy` and `alex`, are no longer included in this image (as of `winamd64/haskell:8.2.2` & `winamd64/haskell:8.4.3`). There is a bootstrapping problem where one or more of these tools may be assumed to be available. If you run in to an error about missing dependencies that are not explicitly called out in a Cabal package, you will need to explicitly mark them for installation.
 
 ### Considerations for Stack
 
@@ -139,7 +140,7 @@ Compiler version mismatched, found ghc-8.4.3 (x86_64), but expected minor versio
 To install the correct GHC into /root/.stack/programs/x86_64-linux/, try running "stack setup" or use the "--install-ghc" flag.
 ```
 
-In this case, the GHC release in the `haskell` Docker image got ahead of the default Stack resolver expected version of GHC. As the output suggests, manually setting the resolver (typically via `stack.yml`) is the recommended approach.
+In this case, the GHC release in the `winamd64/haskell` Docker image got ahead of the default Stack resolver expected version of GHC. As the output suggests, manually setting the resolver (typically via `stack.yml`) is the recommended approach.
 
 ```console
 Step 2/3 : RUN stack install --resolver ghc-8.4.3 pandoc
@@ -151,7 +152,7 @@ Updating package index Hackage (mirrored at https://s3.amazonaws.com/hackage.fpc
 Selected mirror https://s3.amazonaws.com/hackage.fpcomplete.com/
 ```
 
-The alternative to use `--install-ghc` doesn't make sense in a Docker image context, and in fact the global `install-ghc` flag has been set to `false` (as of `haskell:8.2.2` & `haskell:8.4.3`) to avoid the default behavior of bootstrapping a new GHC in the container.
+The alternative to use `--install-ghc` doesn't make sense in a Docker image context, and in fact the global `install-ghc` flag has been set to `false` (as of `winamd64/haskell:8.2.2` & `winamd64/haskell:8.4.3`) to avoid the default behavior of bootstrapping a new GHC in the container.
 
 # License
 

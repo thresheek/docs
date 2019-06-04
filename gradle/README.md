@@ -16,11 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.4.1-jdk8`, `5.4-jdk8`, `jdk8`, `5.4.1-jdk`, `5.4-jdk`, `jdk`, `5.4.1`, `5.4`, `latest` (*jdk8/Dockerfile*)](https://github.com/keeganwitt/docker-gradle/blob/75d1e77b163e0368f508a2ebf942eb230b4e475c/jdk8/Dockerfile)
--	[`5.4.1-jre8`, `5.4-jre8`, `jre8`, `5.4.1-jre`, `5.4-jre`, `jre` (*jre8/Dockerfile*)](https://github.com/keeganwitt/docker-gradle/blob/75d1e77b163e0368f508a2ebf942eb230b4e475c/jre8/Dockerfile)
--	[`5.4.1-jdk11`, `5.4-jdk11`, `jdk11` (*jdk11/Dockerfile*)](https://github.com/keeganwitt/docker-gradle/blob/75d1e77b163e0368f508a2ebf942eb230b4e475c/jdk11/Dockerfile)
--	[`5.4.1-jdk12`, `5.4-jdk12`, `jdk12` (*jdk12/Dockerfile*)](https://github.com/keeganwitt/docker-gradle/blob/75d1e77b163e0368f508a2ebf942eb230b4e475c/jdk12/Dockerfile)
--	[`5.4.1-jre12`, `5.4-jre12`, `jre12` (*jre12/Dockerfile*)](https://github.com/keeganwitt/docker-gradle/blob/75d1e77b163e0368f508a2ebf942eb230b4e475c/jre12/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `gradle` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -62,7 +60,7 @@ WARNING:
 
 Run this from the directory of the Gradle project you want to build.
 
-`docker run --rm -u gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle gradle <gradle-task>`
+`docker run --rm -u gradle -v "$PWD":/home/gradle/project -w /home/gradle/project winamd64/gradle gradle <gradle-task>`
 
 Note the above command runs using uid/gid 1000 (user *gradle*) to avoid running as root.
 

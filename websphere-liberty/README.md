@@ -16,34 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`beta` (*beta/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/beta/Dockerfile)
--	[`19.0.0.5-kernel`, `kernel` (*ga/19.0.0.5/kernel/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/kernel/Dockerfile)
--	[`19.0.0.5-javaee8`, `javaee8`, `latest` (*ga/19.0.0.5/javaee8/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/javaee8/Dockerfile)
--	[`19.0.0.5-webProfile8`, `webProfile8` (*ga/19.0.0.5/webProfile8/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/webProfile8/Dockerfile)
--	[`19.0.0.5-microProfile1`, `microProfile1` (*ga/19.0.0.5/microProfile1/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/microProfile1/Dockerfile)
--	[`19.0.0.5-microProfile2`, `microProfile2` (*ga/19.0.0.5/microProfile2/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/microProfile2/Dockerfile)
--	[`19.0.0.5-springBoot2`, `springBoot2` (*ga/19.0.0.5/springBoot2/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/springBoot2/Dockerfile)
--	[`19.0.0.5-springBoot1`, `springBoot1` (*ga/19.0.0.5/springBoot1/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/springBoot1/Dockerfile)
--	[`19.0.0.5-webProfile7`, `webProfile7` (*ga/19.0.0.5/webProfile7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/webProfile7/Dockerfile)
--	[`19.0.0.5-javaee7`, `javaee7` (*ga/19.0.0.5/javaee7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.5/javaee7/Dockerfile)
--	[`19.0.0.3-kernel` (*ga/19.0.0.3/kernel/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/kernel/Dockerfile)
--	[`19.0.0.3-javaee8` (*ga/19.0.0.3/javaee8/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/javaee8/Dockerfile)
--	[`19.0.0.3-webProfile8` (*ga/19.0.0.3/webProfile8/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/webProfile8/Dockerfile)
--	[`19.0.0.3-microProfile1` (*ga/19.0.0.3/microProfile1/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/microProfile1/Dockerfile)
--	[`19.0.0.3-microProfile2` (*ga/19.0.0.3/microProfile2/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/microProfile2/Dockerfile)
--	[`19.0.0.3-springBoot2` (*ga/19.0.0.3/springBoot2/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/springBoot2/Dockerfile)
--	[`19.0.0.3-springBoot1` (*ga/19.0.0.3/springBoot1/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/springBoot1/Dockerfile)
--	[`19.0.0.3-webProfile7` (*ga/19.0.0.3/webProfile7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/webProfile7/Dockerfile)
--	[`19.0.0.3-javaee7` (*ga/19.0.0.3/javaee7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/19.0.0.3/javaee7/Dockerfile)
--	[`18.0.0.4-kernel` (*ga/18.0.0.4/kernel/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/kernel/Dockerfile)
--	[`18.0.0.4-javaee8` (*ga/18.0.0.4/javaee8/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/javaee8/Dockerfile)
--	[`18.0.0.4-webProfile8` (*ga/18.0.0.4/webProfile8/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/webProfile8/Dockerfile)
--	[`18.0.0.4-microProfile1` (*ga/18.0.0.4/microProfile1/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/microProfile1/Dockerfile)
--	[`18.0.0.4-microProfile2` (*ga/18.0.0.4/microProfile2/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/microProfile2/Dockerfile)
--	[`18.0.0.4-springBoot2` (*ga/18.0.0.4/springBoot2/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/springBoot2/Dockerfile)
--	[`18.0.0.4-springBoot1` (*ga/18.0.0.4/springBoot1/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/springBoot1/Dockerfile)
--	[`18.0.0.4-webProfile7` (*ga/18.0.0.4/webProfile7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/webProfile7/Dockerfile)
--	[`18.0.0.4-javaee7` (*ga/18.0.0.4/javaee7/Dockerfile*)](https://github.com/WASdev/ci.docker/blob/be4349167c4a5540c739e127bd52075d472976b3/ga/18.0.0.4/javaee7/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `websphere-liberty` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -125,7 +100,7 @@ There are multiple tags available in this repository. The image with the tag `be
 The `kernel` image contains just the Liberty kernel and no additional runtime features. This image can be used as the basis for custom built images that contain only the features required for a specific application. For example, the following Dockerfile starts with this image, copies in the `server.xml` that lists the features required by the application, and then uses the `installUtility` command to download those features from the online repository.
 
 ```dockerfile
-FROM websphere-liberty:kernel
+FROM winamd64/websphere-liberty:kernel
 COPY --chown=1001:0  Sample1.war /config/dropins/
 COPY --chown=1001:0  server.xml /config/
 RUN installUtility install --acceptLicense defaultServer
@@ -168,7 +143,7 @@ When using `volumes`, an application file can be mounted in the `dropins` direct
 ```console
 $ docker run -d -p 80:9080 -p 443:9443 \
 	    -v /tmp/DefaultServletEngine/dropins/Sample1.war:/config/dropins/Sample1.war \
-	    websphere-liberty:webProfile8
+	    winamd64/websphere-liberty:webProfile8
 ```
 
 When the server is started, you can browse to http://localhost/Sample1/SimpleServlet on the Docker host.
@@ -180,7 +155,7 @@ For greater flexibility over configuration, it is possible to mount an entire se
 	```console
 	$ docker run -d -p 80:9080 \
 	  -v /tmp/DefaultServletEngine:/config \
-	  websphere-liberty:webProfile8
+	  winamd64/websphere-liberty:webProfile8
 	```
 
 # Using `springBoot` images
@@ -190,7 +165,7 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 1.	A Spring Boot application JAR deploys to the `dropins/spring` directory within the default server configuration, not the `dropins` directory. Liberty allows one Spring Boot application per server configuration. You can create a Spring Boot application layer over this image by adding the application JAR to the `dropins/spring` directory. In this example we copied `hellospringboot.jar` from `/tmp` to the same directory containing the following Dockerfile.
 
 	```dockerfile
-	FROM websphere-liberty:springBoot2
+	FROM winamd64/websphere-liberty:springBoot2
 	COPY --chown=1001:0 hellospringboot.jar /config/dropins/spring/
 	```
 
@@ -206,13 +181,13 @@ The `springBoot` images introduce capabilities specific to the support of Spring
 	You can use the `springBootUtility` command to create thin application and library cache layers over a `springBoot` image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache.
 
 	```dockerfile
-	FROM websphere-liberty:springBoot2 as staging
+	FROM winamd64/websphere-liberty:springBoot2 as staging
 	COPY --chown=1001:0 hellospringboot.jar /staging/myFatApp.jar
 	RUN springBootUtility thin \
 	   --sourceAppPath=/staging/myFatApp.jar \
 	   --targetThinAppPath=/staging/myThinApp.jar \
 	   --targetLibCachePath=/staging/lib.index.cache
-	FROM websphere-liberty:springBoot2
+	FROM winamd64/websphere-liberty:springBoot2
 	COPY --from=staging /staging/lib.index.cache /lib.index.cache
 	COPY --from=staging /staging/myThinApp.jar /config/dropins/spring/myThinApp.jar
 	```
@@ -238,7 +213,7 @@ Or, create a named data volume container that exposes a volume at the location o
 
 ```console
 docker run -e LICENSE=accept -v /opt/ibm/wlp/output/.classCache \
-    --name classcache websphere-liberty true
+    --name classcache winamd64/websphere-liberty true
 ```
 
 Then, run the WebSphere Liberty image with the volumes from the data volume container classcache mounted as follows:
@@ -254,15 +229,15 @@ Liberty writes to two different directories when running: `/opt/ibm/wlp/output` 
 ```console
 docker run -d -p 80:9080 -p 443:9443 \
     --tmpfs /opt/ibm/wlp/output --tmpfs /logs -v /config --read-only \
-    websphere-liberty:javaee8
+    winamd64/websphere-liberty:javaee8
 ```
 
 # Changing locale
 
-The base Ubuntu image does not include additional language packs. To use an alternative locale, build your own image that installs the required language pack and then sets the `LANG` environment variable. For example, the following Dockerfile starts with the `websphere-liberty:webProfile8` image, installs the Portuguese language pack, and sets Brazilian Portuguese as the default locale:
+The base Ubuntu image does not include additional language packs. To use an alternative locale, build your own image that installs the required language pack and then sets the `LANG` environment variable. For example, the following Dockerfile starts with the `winamd64/websphere-liberty:webProfile8` image, installs the Portuguese language pack, and sets Brazilian Portuguese as the default locale:
 
 ```dockerfile
-FROM websphere-liberty:webProfile8
+FROM winamd64/websphere-liberty:webProfile8
 RUN apt-get update \
   && apt-get install -y language-pack-pt-base \
   && rm -rf /var/lib/apt/lists/*

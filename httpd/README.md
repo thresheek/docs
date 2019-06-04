@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.4.39`, `2.4`, `2`, `latest` (*2.4/Dockerfile*)](https://github.com/docker-library/httpd/blob/75e85910d1d9954ea0709960c61517376fc9b254/2.4/Dockerfile)
--	[`2.4.39-alpine`, `2.4-alpine`, `2-alpine`, `alpine` (*2.4/alpine/Dockerfile*)](https://github.com/docker-library/httpd/blob/75e85910d1d9954ea0709960c61517376fc9b254/2.4/alpine/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `httpd` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -62,7 +63,7 @@ This image only contains Apache httpd with the defaults from upstream. There is 
 ### Create a `Dockerfile` in your project
 
 ```dockerfile
-FROM httpd:2.4
+FROM winamd64/httpd:2.4
 COPY ./public-html/ /usr/local/apache2/htdocs/
 ```
 
@@ -80,7 +81,7 @@ Visit http://localhost:8080 and you will see It works!
 If you don't want to include a `Dockerfile` in your project, it is sufficient to do the following:
 
 ```console
-$ docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
+$ docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ winamd64/httpd:2.4
 ```
 
 ### Configuration
@@ -88,7 +89,7 @@ $ docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/h
 To customize the configuration of the httpd server, just `COPY` your custom configuration in as `/usr/local/apache2/conf/httpd.conf`.
 
 ```dockerfile
-FROM httpd:2.4
+FROM winamd64/httpd:2.4
 COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
 ```
 
@@ -119,22 +120,6 @@ RUN sed -i \
 ```
 
 The previous steps should work well for development, but we recommend customizing your conf files for production, see [httpd.apache.org](https://httpd.apache.org/docs/2.4/ssl/ssl_faq.html) for more information about SSL setup.
-
-# Image Variants
-
-The `httpd` images come in many flavors, each designed for a specific use case.
-
-## `httpd:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `httpd:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

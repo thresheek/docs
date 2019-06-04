@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v1.4.2-2.0`, `v1.4-2`, `latest` (*v1.4/alpine/Dockerfile*)](https://github.com/fluent/fluentd-docker-image/blob/dabca3c327d08be6d43a8919316a57ca2228e603/v1.4/alpine/Dockerfile)
--	[`v1.4.2-debian-2.0`, `v1.4-debian-2` (*v1.4/debian/Dockerfile*)](https://github.com/fluent/fluentd-docker-image/blob/dabca3c327d08be6d43a8919316a57ca2228e603/v1.4/debian/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `fluentd` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -58,7 +59,7 @@ For more information, check [official site](https://www.fluentd.org/) and [docum
 # How to run images
 
 ```bash
-$ docker run -p 24224:24224 -p 24224:24224/udp -u fluent -v /path/to/dir:/fluentd/log fluentd
+$ docker run -p 24224:24224 -p 24224:24224/udp -u fluent -v /path/to/dir:/fluentd/log winamd64/fluentd
 2019-01-16 11:49:55 +0000 [info]: parsing config file is succeeded path="/fluentd/etc/fluent.conf"
 ...
 2019-01-16 11:58:27 +0000 [info]: #0 [input1] listening port port=24224 bind="0.0.0.0"
