@@ -16,8 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `8.1.6` (*8.1.6/stretch/Dockerfile*)](https://github.com/SWI-Prolog/docker-swipl/blob/f2abb30cffae0af6e27207dafd9e181e61abe315/8.1.6/stretch/Dockerfile)
--	[`stable`, `8.0.0` (*8.0.0/stretch/Dockerfile*)](https://github.com/SWI-Prolog/docker-swipl/blob/f2abb30cffae0af6e27207dafd9e181e61abe315/8.0.0/stretch/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `swipl` does not support the currently selected architecture (`ppc64le`).
 
 # Quick reference
 
@@ -62,7 +63,7 @@ SWI-Prolog is a versatile implementation of the Prolog language. Its robust mult
 This image can be run directly to obtain an SWI-Prolog environment with most useful modules pre-built. When started without parameters, the SWI-Prolog REPL is launched automatically:
 
 ```console
-docker run -it swipl 
+docker run -it ppc64le/swipl 
 ```
 
 ## Build an image with your application
@@ -70,7 +71,7 @@ docker run -it swipl
 It is also useful to build images on top of this base image which rely on SWI-Prolog and provide their own default command:
 
 ```dockerfile
-FROM swipl
+FROM ppc64le/swipl
 COPY . /app
 CMD ["swipl", "/app/start.pl"]
 ```

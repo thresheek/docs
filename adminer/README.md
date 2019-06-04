@@ -19,6 +19,8 @@ WARNING:
 -	[`4.7.1-standalone`, `4.7-standalone`, `4-standalone`, `standalone`, `4.7.1`, `4.7`, `4`, `latest` (*4/Dockerfile*)](https://github.com/TimWolla/docker-adminer/blob/178f07b71e7a5590569bbf4934d446f5534bf160/4/Dockerfile)
 -	[`4.7.1-fastcgi`, `4.7-fastcgi`, `4-fastcgi`, `fastcgi` (*4/fastcgi/Dockerfile*)](https://github.com/TimWolla/docker-adminer/blob/178f07b71e7a5590569bbf4934d446f5534bf160/4/fastcgi/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/adminer/badge/icon) (`ppc64le/adminer` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/adminer/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -62,7 +64,7 @@ Adminer (formerly phpMinAdmin) is a full-featured database management tool writt
 ### Standalone
 
 ```console
-$ docker run --link some_database:db -p 8080:8080 adminer
+$ docker run --link some_database:db -p 8080:8080 ppc64le/adminer
 ```
 
 Then you can hit `http://localhost:8080` or `http://host-ip:8080` in your browser.
@@ -72,7 +74,7 @@ Then you can hit `http://localhost:8080` or `http://host-ip:8080` in your browse
 If you are already running a FastCGI capable web server you might prefer running Adminer via FastCGI:
 
 ```console
-$ docker run --link some_database:db -p 9000:9000 adminer:fastcgi
+$ docker run --link some_database:db -p 9000:9000 ppc64le/adminer:fastcgi
 ```
 
 Then point your web server to port 9000 of the container.
@@ -114,13 +116,13 @@ This image bundles all official Adminer plugins. You can find the list of plugin
 To load plugins you can pass a list of filenames in `ADMINER_PLUGINS`:
 
 ```console
-$ docker run --link some_database:db -p 8080:8080 -e ADMINER_PLUGINS='tables-filter tinymce' adminer
+$ docker run --link some_database:db -p 8080:8080 -e ADMINER_PLUGINS='tables-filter tinymce' ppc64le/adminer
 ```
 
 If a plugin *requires* parameters to work correctly you will need to add a custom file to the container:
 
 ```console
-$ docker run --link some_database:db -p 8080:8080 -e ADMINER_PLUGINS='login-servers' adminer
+$ docker run --link some_database:db -p 8080:8080 -e ADMINER_PLUGINS='login-servers' ppc64le/adminer
 Unable to load plugin file "login-servers", because it has required parameters: servers
 Create a file "/var/www/html/plugins-enabled/login-servers.php" with the following contents to load the plugin:
 
@@ -146,7 +148,7 @@ The image bundles all the designs that are available in the source package of ad
 To use a bundled design you can pass its name in `ADMINER_DESIGN`:
 
 ```console
-$ docker run --link some_database:db -p 8080:8080 -e ADMINER_DESIGN='nette' adminer
+$ docker run --link some_database:db -p 8080:8080 -e ADMINER_DESIGN='nette' ppc64le/adminer
 ```
 
 To use a custom design you can add a file called `/var/www/html/adminer.css`.
@@ -156,7 +158,7 @@ To use a custom design you can add a file called `/var/www/html/adminer.css`.
 You can specify the default host with the `ADMINER_DEFAULT_SERVER` environment variable. This is useful if you are connecting to an external server or a docker container named something other than the default `db`.
 
 ```console
-docker run -p 8080:8080 -e ADMINER_DEFAULT_SERVER=mysql adminer
+docker run -p 8080:8080 -e ADMINER_DEFAULT_SERVER=mysql ppc64le/adminer
 ```
 
 ## Supported Drivers

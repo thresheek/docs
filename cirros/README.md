@@ -16,7 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`0.4.0`, `0.4`, `0`, `latest` (*arches/amd64/Dockerfile*)](https://github.com/tianon/docker-brew-cirros/blob/d04ffb350eb29c24bafe12f6b109aa3990309771/arches/amd64/Dockerfile)
+-	[`0.4.0`, `0.4`, `0`, `latest` (*arches/ppc64le/Dockerfile*)](https://github.com/tianon/docker-brew-cirros/blob/d04ffb350eb29c24bafe12f6b109aa3990309771/arches/ppc64le/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/cirros/badge/icon) (`ppc64le/cirros` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/cirros/)
 
 # Quick reference
 

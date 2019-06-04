@@ -19,6 +19,8 @@ WARNING:
 -	[`1.5.16`, `1.5`, `1`, `latest` (*debian/Dockerfile*)](https://github.com/docker-library/memcached/blob/3d913e037455832102c16ebac505cc347b8cb426/debian/Dockerfile)
 -	[`1.5.16-alpine`, `1.5-alpine`, `1-alpine`, `alpine` (*alpine/Dockerfile*)](https://github.com/docker-library/memcached/blob/3d913e037455832102c16ebac505cc347b8cb426/alpine/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/memcached/badge/icon) (`ppc64le/memcached` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/memcached/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -58,13 +60,13 @@ Memcached's APIs provide a very large hash table distributed across multiple mac
 # How to use this image
 
 ```console
-$ docker run --name my-memcache -d memcached
+$ docker run --name my-memcache -d ppc64le/memcached
 ```
 
 ## Setting Memory Usage
 
 ```console
-$ docker run --name my-memcache -d memcached memcached -m 64
+$ docker run --name my-memcache -d ppc64le/memcached memcached -m 64
 ```
 
 This would set the Memcached server to use 64 megabytes for storage.
@@ -73,13 +75,13 @@ For infomation on configuring your memcached server, see the extensive [wiki](ht
 
 # Image Variants
 
-The `memcached` images come in many flavors, each designed for a specific use case.
+The `ppc64le/memcached` images come in many flavors, each designed for a specific use case.
 
-## `memcached:<version>`
+## `ppc64le/memcached:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `memcached:<version>-alpine`
+## `ppc64le/memcached:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

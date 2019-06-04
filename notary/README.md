@@ -19,6 +19,8 @@ WARNING:
 -	[`server-0.6.1-1`, `server` (*notary-server/Dockerfile*)](https://github.com/docker/notary-official-images/blob/ee9401173fbe4c672f3e3e71b0881d21f2112eca/notary-server/Dockerfile)
 -	[`signer-0.6.1-1`, `signer` (*notary-signer/Dockerfile*)](https://github.com/docker/notary-official-images/blob/ee9401173fbe4c672f3e3e71b0881d21f2112eca/notary-signer/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/notary/badge/icon) (`ppc64le/notary` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/notary/)
+
 # Quick reference
 
 -	**Where to get help**:  

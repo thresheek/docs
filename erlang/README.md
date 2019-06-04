@@ -25,10 +25,8 @@ WARNING:
 -	[`20.3.8.21`, `20.3.8`, `20.3`, `20` (*20/Dockerfile*)](https://github.com/erlang/docker-erlang-otp/blob/4c80d1efa8cb9499e9c8f15ecfc2a944dfde8b1f/20/Dockerfile)
 -	[`20.3.8.21-slim`, `20.3.8-slim`, `20.3-slim`, `20-slim` (*20/slim/Dockerfile*)](https://github.com/erlang/docker-erlang-otp/blob/4c80d1efa8cb9499e9c8f15ecfc2a944dfde8b1f/20/slim/Dockerfile)
 -	[`20.3.8.21-alpine`, `20.3.8-alpine`, `20.3-alpine`, `20-alpine` (*20/alpine/Dockerfile*)](https://github.com/erlang/docker-erlang-otp/blob/4c80d1efa8cb9499e9c8f15ecfc2a944dfde8b1f/20/alpine/Dockerfile)
--	[`19.3.6.13`, `19.3.6`, `19.3`, `19` (*19/Dockerfile*)](https://github.com/erlang/docker-erlang-otp/blob/7b9e1d54cf93f53b9ace21b9103588c77c198d2f/19/Dockerfile)
--	[`19.3.6.13-slim`, `19.3.6-slim`, `19.3-slim`, `19-slim` (*19/slim/Dockerfile*)](https://github.com/erlang/docker-erlang-otp/blob/7b9e1d54cf93f53b9ace21b9103588c77c198d2f/19/slim/Dockerfile)
--	[`18.3.4.11`, `18.3.4`, `18.3`, `18` (*18/Dockerfile*)](https://github.com/erlang/docker-erlang-otp/blob/8815a0c2ce5282dbf08553f602e5214e4e9631ce/18/Dockerfile)
--	[`18.3.4.11-slim`, `18.3.4-slim`, `18.3-slim`, `18-slim` (*18/slim/Dockerfile*)](https://github.com/erlang/docker-erlang-otp/blob/145d4a0002206e003cc76c8719b6264529165889/18/slim/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/erlang/badge/icon) (`ppc64le/erlang` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/erlang/)
 
 # Quick reference
 
@@ -71,7 +69,7 @@ Erlang is a programming language used to build massively scalable soft real-time
 ## Run it as the REPL
 
 ```console
-➸ docker run -it --rm erlang
+➸ docker run -it --rm ppc64le/erlang
 Erlang/OTP 20 [erts-9.0] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
 
 Eshell V9.0  (abort with ^G)
@@ -90,7 +88,7 @@ User switch command
   q                 - quit erlang
   ? | h             - this message
  --> q
-➸ docker run -it --rm -h erlang.local erlang erl -name snode@erlang.local
+➸ docker run -it --rm -h erlang.local ppc64le/erlang erl -name snode@erlang.local
 Erlang/OTP 20 [erts-9.0] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
 
 Eshell V9.0  (abort with ^G)
@@ -104,24 +102,24 @@ User switch command
 ## Run a single Erlang escript
 
 ```console
-$ docker run -it --rm --name erlang-inst1 -v "$PWD":/usr/src/myapp -w /usr/src/myapp erlang escript your-escript.erl
+$ docker run -it --rm --name erlang-inst1 -v "$PWD":/usr/src/myapp -w /usr/src/myapp ppc64le/erlang escript your-escript.erl
 ```
 
 # Image Variants
 
-The `erlang` images come in many flavors, each designed for a specific use case.
+The `ppc64le/erlang` images come in many flavors, each designed for a specific use case.
 
-## `erlang:<version>`
+## `ppc64le/erlang:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
 This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
 
-## `erlang:<version>-slim`
+## `ppc64le/erlang:<version>-slim`
 
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `erlang`. Unless you are working in an environment where *only* the `erlang` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `ppc64le/erlang`. Unless you are working in an environment where *only* the `ppc64le/erlang` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
-## `erlang:<version>-alpine`
+## `ppc64le/erlang:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 

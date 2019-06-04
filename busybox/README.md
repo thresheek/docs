@@ -16,10 +16,11 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.30.1-uclibc`, `1.30-uclibc`, `1-uclibc`, `uclibc` (*uclibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/54245fc8495d2b69cf6bad72af387eb628604c6a/uclibc/Dockerfile)
--	[`1.30.1-glibc`, `1.30-glibc`, `1-glibc`, `glibc` (*glibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/54245fc8495d2b69cf6bad72af387eb628604c6a/glibc/Dockerfile)
--	[`1.30.1-musl`, `1.30-musl`, `1-musl`, `musl` (*musl/Dockerfile*)](https://github.com/docker-library/busybox/blob/54245fc8495d2b69cf6bad72af387eb628604c6a/musl/Dockerfile)
--	[`1.30.1`, `1.30`, `1`, `latest` (*uclibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/54245fc8495d2b69cf6bad72af387eb628604c6a/uclibc/Dockerfile)
+-	[`1.30.1-glibc`, `1.30-glibc`, `1-glibc`, `glibc` (*glibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/96f57d30722a72683a3c88e8e2a40f72a6fb6c74/glibc/Dockerfile)
+-	[`1.30.1-musl`, `1.30-musl`, `1-musl`, `musl` (*musl/Dockerfile*)](https://github.com/docker-library/busybox/blob/96f57d30722a72683a3c88e8e2a40f72a6fb6c74/musl/Dockerfile)
+-	[`1.30.1`, `1.30`, `1`, `latest` (*glibc/Dockerfile*)](https://github.com/docker-library/busybox/blob/96f57d30722a72683a3c88e8e2a40f72a6fb6c74/glibc/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/busybox/badge/icon) (`ppc64le/busybox` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/busybox/)
 
 # Quick reference
 
@@ -64,7 +65,7 @@ BusyBox combines tiny versions of many common UNIX utilities into a single small
 ## Run BusyBox shell
 
 ```console
-$ docker run -it --rm busybox
+$ docker run -it --rm ppc64le/busybox
 ```
 
 This will drop you into an `sh` shell to allow you to do what you want inside a BusyBox system.
@@ -72,7 +73,7 @@ This will drop you into an `sh` shell to allow you to do what you want inside a 
 ## Create a `Dockerfile` for a binary
 
 ```dockerfile
-FROM busybox
+FROM ppc64le/busybox
 COPY ./my-static-binary /my-static-binary
 CMD ["/my-static-binary"]
 ```
@@ -81,19 +82,15 @@ This `Dockerfile` will allow you to create a minimal image for your statically c
 
 # Image Variants
 
-The `busybox` images contain BusyBox built against various "libc" variants (for a comparison of "libc" variants, [Eta Labs has a very nice chart](http://www.etalabs.net/compare_libcs.html) which lists many similarities and differences).
+The `ppc64le/busybox` images contain BusyBox built against various "libc" variants (for a comparison of "libc" variants, [Eta Labs has a very nice chart](http://www.etalabs.net/compare_libcs.html) which lists many similarities and differences).
 
 For more information about the specific particulars of the build process for each variant, see `Dockerfile.builder` in the same directory as each variant's `Dockerfile` (see links above).
 
-## `busybox:uclibc`
-
--	[uClibc](https://uclibc.org) via [Buildroot](https://buildroot.org) (statically compiled)
-
-## `busybox:glibc`
+## `ppc64le/busybox:glibc`
 
 -	[glibc from Debian](https://packages.debian.org/search?searchon=names&exact=1&suite=all&section=all&keywords=libc6) (which is then included in the image)
 
-## `busybox:musl`
+## `ppc64le/busybox:musl`
 
 -	[musl from Alpine](https://pkgs.alpinelinux.org/packages?name=musl) (statically compiled)
 

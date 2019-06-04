@@ -29,6 +29,8 @@ WARNING:
 -	[`1.5.19`, `1.5` (*1.5/Dockerfile*)](https://github.com/docker-library/haproxy/blob/2c49aafa4925bf68402c003542f3f82c94cb2c0f/1.5/Dockerfile)
 -	[`1.5.19-alpine`, `1.5-alpine` (*1.5/alpine/Dockerfile*)](https://github.com/docker-library/haproxy/blob/2c49aafa4925bf68402c003542f3f82c94cb2c0f/1.5/alpine/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/haproxy/badge/icon) (`ppc64le/haproxy` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/haproxy/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -76,7 +78,7 @@ It is also worth checking out the [`examples/` directory from upstream](http://g
 ## Create a `Dockerfile`
 
 ```dockerfile
-FROM haproxy:1.7
+FROM ppc64le/haproxy:1.7
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 ```
 
@@ -103,7 +105,7 @@ You may need to publish the ports your HAProxy is listening on to the host by sp
 ## Directly via bind mount
 
 ```console
-$ docker run -d --name my-running-haproxy -v /path/to/etc/haproxy:/usr/local/etc/haproxy:ro haproxy:1.7
+$ docker run -d --name my-running-haproxy -v /path/to/etc/haproxy:/usr/local/etc/haproxy:ro ppc64le/haproxy:1.7
 ```
 
 Note that your host's `/path/to/etc/haproxy` folder should be populated with a file named `haproxy.cfg`. If this configuration file refers to any other files within that folder then you should ensure that they also exist (e.g. template files such as `400.http`, `404.http`, and so forth). However, many minimal configurations do not require any supporting files.
@@ -120,13 +122,13 @@ The entrypoint script in the image checks for running the command `haproxy` and 
 
 # Image Variants
 
-The `haproxy` images come in many flavors, each designed for a specific use case.
+The `ppc64le/haproxy` images come in many flavors, each designed for a specific use case.
 
-## `haproxy:<version>`
+## `ppc64le/haproxy:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `haproxy:<version>-alpine`
+## `ppc64le/haproxy:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
