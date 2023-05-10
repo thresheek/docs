@@ -24,21 +24,21 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`15.2`, `15`, `latest`, `15.2-bullseye`, `15-bullseye`, `bullseye`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/15/bullseye/Dockerfile)
+-	[`15.2`, `15`, `latest`, `15.2-bullseye`, `15-bullseye`, `bullseye`](https://github.com/docker-library/postgres/blob/dd68d91377a3631b36a23f2e4795f6189db4ba12/15/bullseye/Dockerfile)
 -	[`15.2-alpine`, `15-alpine`, `alpine`, `15.2-alpine3.17`, `15-alpine3.17`, `alpine3.17`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/15/alpine/Dockerfile)
--	[`14.7`, `14`, `14.7-bullseye`, `14-bullseye`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/14/bullseye/Dockerfile)
+-	[`14.7`, `14`, `14.7-bullseye`, `14-bullseye`](https://github.com/docker-library/postgres/blob/dd68d91377a3631b36a23f2e4795f6189db4ba12/14/bullseye/Dockerfile)
 -	[`14.7-alpine`, `14-alpine`, `14.7-alpine3.17`, `14-alpine3.17`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/14/alpine/Dockerfile)
--	[`13.10`, `13`, `13.10-bullseye`, `13-bullseye`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/13/bullseye/Dockerfile)
+-	[`13.10`, `13`, `13.10-bullseye`, `13-bullseye`](https://github.com/docker-library/postgres/blob/dd68d91377a3631b36a23f2e4795f6189db4ba12/13/bullseye/Dockerfile)
 -	[`13.10-alpine`, `13-alpine`, `13.10-alpine3.17`, `13-alpine3.17`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/13/alpine/Dockerfile)
--	[`12.14`, `12`, `12.14-bullseye`, `12-bullseye`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/12/bullseye/Dockerfile)
+-	[`12.14`, `12`, `12.14-bullseye`, `12-bullseye`](https://github.com/docker-library/postgres/blob/dd68d91377a3631b36a23f2e4795f6189db4ba12/12/bullseye/Dockerfile)
 -	[`12.14-alpine`, `12-alpine`, `12.14-alpine3.17`, `12-alpine3.17`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/12/alpine/Dockerfile)
--	[`11.19-bullseye`, `11-bullseye`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/11/bullseye/Dockerfile)
+-	[`11.19-bullseye`, `11-bullseye`](https://github.com/docker-library/postgres/blob/dd68d91377a3631b36a23f2e4795f6189db4ba12/11/bullseye/Dockerfile)
 -	[`11.19-alpine`, `11-alpine`, `11.19-alpine3.17`, `11-alpine3.17`](https://github.com/docker-library/postgres/blob/25b3034e9b0155c3e71acaf650243e7d12a571c1/11/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker-library/postgres/issues](https://github.com/docker-library/postgres/issues)
+	[https://github.com/docker-library/postgres/issues](https://github.com/docker-library/postgres/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/postgres/), [`arm32v5`](https://hub.docker.com/r/arm32v5/postgres/), [`arm32v6`](https://hub.docker.com/r/arm32v6/postgres/), [`arm32v7`](https://hub.docker.com/r/arm32v7/postgres/), [`arm64v8`](https://hub.docker.com/r/arm64v8/postgres/), [`i386`](https://hub.docker.com/r/i386/postgres/), [`mips64le`](https://hub.docker.com/r/mips64le/postgres/), [`ppc64le`](https://hub.docker.com/r/ppc64le/postgres/), [`s390x`](https://hub.docker.com/r/s390x/postgres/)

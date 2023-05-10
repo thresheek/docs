@@ -24,14 +24,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.8-dev7`, `2.8-dev`, `2.8-dev7-bullseye`, `2.8-dev-bullseye`](https://github.com/docker-library/haproxy/blob/cc787a7b72dcba589f35e0ec89daa7a36a38f608/2.8/Dockerfile)
--	[`2.8-dev7-alpine`, `2.8-dev-alpine`, `2.8-dev7-alpine3.17`, `2.8-dev-alpine3.17`](https://github.com/docker-library/haproxy/blob/cc787a7b72dcba589f35e0ec89daa7a36a38f608/2.8/alpine/Dockerfile)
--	[`2.7.6`, `2.7`, `latest`, `2.7.6-bullseye`, `2.7-bullseye`, `bullseye`](https://github.com/docker-library/haproxy/blob/3e8ddb695fb46f902afea21ce0de1d481c1c71ab/2.7/Dockerfile)
--	[`2.7.6-alpine`, `2.7-alpine`, `alpine`, `2.7.6-alpine3.17`, `2.7-alpine3.17`, `alpine3.17`](https://github.com/docker-library/haproxy/blob/3e8ddb695fb46f902afea21ce0de1d481c1c71ab/2.7/alpine/Dockerfile)
--	[`2.6.12`, `2.6`, `lts`, `2.6.12-bullseye`, `2.6-bullseye`, `lts-bullseye`](https://github.com/docker-library/haproxy/blob/791843a38289bd3b5238715cbe6ed993214b2d73/2.6/Dockerfile)
--	[`2.6.12-alpine`, `2.6-alpine`, `lts-alpine`, `2.6.12-alpine3.17`, `2.6-alpine3.17`, `lts-alpine3.17`](https://github.com/docker-library/haproxy/blob/791843a38289bd3b5238715cbe6ed993214b2d73/2.6/alpine/Dockerfile)
--	[`2.5.13`, `2.5`, `2.5.13-bullseye`, `2.5-bullseye`](https://github.com/docker-library/haproxy/blob/8bb4f9f4a41b5c3531a6cb4a070c25be7a254ccd/2.5/Dockerfile)
--	[`2.5.13-alpine`, `2.5-alpine`, `2.5.13-alpine3.17`, `2.5-alpine3.17`](https://github.com/docker-library/haproxy/blob/8bb4f9f4a41b5c3531a6cb4a070c25be7a254ccd/2.5/alpine/Dockerfile)
+-	[`2.8-dev10`, `2.8-dev`, `2.8-dev10-bullseye`, `2.8-dev-bullseye`](https://github.com/docker-library/haproxy/blob/ce432ec1d0ed66b18ebf2418772652137dac7b94/2.8/Dockerfile)
+-	[`2.8-dev10-alpine`, `2.8-dev-alpine`, `2.8-dev10-alpine3.17`, `2.8-dev-alpine3.17`](https://github.com/docker-library/haproxy/blob/ce432ec1d0ed66b18ebf2418772652137dac7b94/2.8/alpine/Dockerfile)
+-	[`2.7.8`, `2.7`, `latest`, `2.7.8-bullseye`, `2.7-bullseye`, `bullseye`](https://github.com/docker-library/haproxy/blob/b5e4baa466adb533d8f644e1ef514a4301addcb1/2.7/Dockerfile)
+-	[`2.7.8-alpine`, `2.7-alpine`, `alpine`, `2.7.8-alpine3.17`, `2.7-alpine3.17`, `alpine3.17`](https://github.com/docker-library/haproxy/blob/b5e4baa466adb533d8f644e1ef514a4301addcb1/2.7/alpine/Dockerfile)
+-	[`2.6.13`, `2.6`, `lts`, `2.6.13-bullseye`, `2.6-bullseye`, `lts-bullseye`](https://github.com/docker-library/haproxy/blob/aad0f7b69e95354996d9cfd7ed8cdc9cd28d3298/2.6/Dockerfile)
+-	[`2.6.13-alpine`, `2.6-alpine`, `lts-alpine`, `2.6.13-alpine3.17`, `2.6-alpine3.17`, `lts-alpine3.17`](https://github.com/docker-library/haproxy/blob/aad0f7b69e95354996d9cfd7ed8cdc9cd28d3298/2.6/alpine/Dockerfile)
 -	[`2.4.22`, `2.4`, `2.4.22-bullseye`, `2.4-bullseye`](https://github.com/docker-library/haproxy/blob/010b099f11c898314bf1e3c90c19ed3bf6cc89e2/2.4/Dockerfile)
 -	[`2.4.22-alpine`, `2.4-alpine`, `2.4.22-alpine3.17`, `2.4-alpine3.17`](https://github.com/docker-library/haproxy/blob/010b099f11c898314bf1e3c90c19ed3bf6cc89e2/2.4/alpine/Dockerfile)
 -	[`2.2.29`, `2.2`, `2.2.29-bullseye`, `2.2-bullseye`](https://github.com/docker-library/haproxy/blob/a341c5a4894f4f8194a5b05076767688d85d369d/2.2/Dockerfile)
@@ -42,7 +40,7 @@ WARNING:
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker-library/haproxy/issues](https://github.com/docker-library/haproxy/issues)
+	[https://github.com/docker-library/haproxy/issues](https://github.com/docker-library/haproxy/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/haproxy/), [`arm32v5`](https://hub.docker.com/r/arm32v5/haproxy/), [`arm32v6`](https://hub.docker.com/r/arm32v6/haproxy/), [`arm32v7`](https://hub.docker.com/r/arm32v7/haproxy/), [`arm64v8`](https://hub.docker.com/r/arm64v8/haproxy/), [`i386`](https://hub.docker.com/r/i386/haproxy/), [`mips64le`](https://hub.docker.com/r/mips64le/haproxy/), [`ppc64le`](https://hub.docker.com/r/ppc64le/haproxy/), [`s390x`](https://hub.docker.com/r/s390x/haproxy/)

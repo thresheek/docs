@@ -24,13 +24,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `2023.02`](https://github.com/Raku/docker/blob/d6873e88a8979536ba7d485aef309b7126965e0d/2023.02/bullseye/Dockerfile)
--	[`alpine`, `2023.02-alpine`](https://github.com/Raku/docker/blob/d6873e88a8979536ba7d485aef309b7126965e0d/2023.02/alpine3.17/Dockerfile)
+-	[`latest`, `2023.04`](https://github.com/Raku/docker/blob/908f33d76c1437ddfdee8596049d8a9877c03d60/2023.04/bullseye/Dockerfile)
+-	[`alpine`, `2023.04-alpine`](https://github.com/Raku/docker/blob/908f33d76c1437ddfdee8596049d8a9877c03d60/2023.04/alpine3.17/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/Raku/docker/issues](https://github.com/Raku/docker/issues)
+	[https://github.com/Raku/docker/issues](https://github.com/Raku/docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/rakudo-star/), [`arm64v8`](https://hub.docker.com/r/arm64v8/rakudo-star/)

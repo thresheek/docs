@@ -24,12 +24,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7`, `latest`](https://github.com/scientificlinux/sl-docker/blob/138a0b30dbde1b11205e41a25686f5ad78d70fe2/sl7/Dockerfile)
+-	[`7`, `latest`](https://github.com/scientificlinux/sl-docker/blob/c369b631e3de151d68e9d02c08e66590048e6230/sl7/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/scientificlinux/sl-docker/issues](https://github.com/scientificlinux/sl-docker/issues)
+	[https://github.com/scientificlinux/sl-docker/issues](https://github.com/scientificlinux/sl-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/sl/)

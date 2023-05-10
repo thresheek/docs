@@ -24,15 +24,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.43.0`, `5.43`, `5`, `latest`](https://github.com/docker-library/ghost/blob/aee27e5570726420ec1534fcbaf8a3a5498e0bd6/5/debian/Dockerfile)
--	[`5.43.0-alpine`, `5.43-alpine`, `5-alpine`, `alpine`](https://github.com/docker-library/ghost/blob/aee27e5570726420ec1534fcbaf8a3a5498e0bd6/5/alpine/Dockerfile)
--	[`4.48.9`, `4.48`, `4`](https://github.com/docker-library/ghost/blob/5d81b0f9a574635a681252cb400281a909a37c81/4/debian/Dockerfile)
--	[`4.48.9-alpine`, `4.48-alpine`, `4-alpine`](https://github.com/docker-library/ghost/blob/1f74dbadd9f1959422a4e42c3f9c0f5d281c4461/4/alpine/Dockerfile)
+-	[`5.47.0`, `5.47`, `5`, `latest`](https://github.com/docker-library/ghost/blob/f20d8389dceceff7ab58b31f44010d9f6eb841b3/5/debian/Dockerfile)
+-	[`5.47.0-alpine`, `5.47-alpine`, `5-alpine`, `alpine`](https://github.com/docker-library/ghost/blob/f20d8389dceceff7ab58b31f44010d9f6eb841b3/5/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/docker-library/ghost/issues](https://github.com/docker-library/ghost/issues)
+	[https://github.com/docker-library/ghost/issues](https://github.com/docker-library/ghost/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/ghost/), [`arm32v6`](https://hub.docker.com/r/arm32v6/ghost/), [`arm32v7`](https://hub.docker.com/r/arm32v7/ghost/), [`arm64v8`](https://hub.docker.com/r/arm64v8/ghost/), [`ppc64le`](https://hub.docker.com/r/ppc64le/ghost/), [`s390x`](https://hub.docker.com/r/s390x/ghost/)
@@ -135,7 +133,7 @@ While the Docker images do have Ghost-CLI available and do use some of its comma
 
 ## Production mode
 
-To run Ghost for production you'll also need to be running with MySQL 8, https, and a reverse proxy configured with appropriate `X-Forwarded-For`, `X-Forwared-Host`, and `X-Forwarded-Proto` (`https`) headers.
+To run Ghost for production you'll also need to be running with MySQL 8, https, and a reverse proxy configured with appropriate `X-Forwarded-For`, `X-Forwarded-Host`, and `X-Forwarded-Proto` (`https`) headers.
 
 The following example demonstrates some of the necessary configuration for running with MySQL. For more detail, see [Ghost's "Configuration options" documentation](https://ghost.org/docs/config/#configuration-options).
 

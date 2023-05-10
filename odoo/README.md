@@ -24,14 +24,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`16.0`, `16`, `latest`](https://github.com/odoo/docker/blob/8be11ad8773c735755378d7ac6399a7bdacd2479/16.0/Dockerfile)
--	[`15.0`, `15`](https://github.com/odoo/docker/blob/8be11ad8773c735755378d7ac6399a7bdacd2479/15.0/Dockerfile)
--	[`14.0`, `14`](https://github.com/odoo/docker/blob/8be11ad8773c735755378d7ac6399a7bdacd2479/14.0/Dockerfile)
+-	[`16.0`, `16`, `latest`](https://github.com/odoo/docker/blob/f7b3182bdccd5e182ecabcb7243696961194f601/16.0/Dockerfile)
+-	[`15.0`, `15`](https://github.com/odoo/docker/blob/f7b3182bdccd5e182ecabcb7243696961194f601/15.0/Dockerfile)
+-	[`14.0`, `14`](https://github.com/odoo/docker/blob/f7b3182bdccd5e182ecabcb7243696961194f601/14.0/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/odoo/docker/issues](https://github.com/odoo/docker/issues)
+	[https://github.com/odoo/docker/issues](https://github.com/odoo/docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/odoo/)

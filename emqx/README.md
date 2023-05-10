@@ -24,13 +24,13 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.4.16`, `4.4`, `4`](https://github.com/emqx/emqx-docker/blob/69e50460c940c4943b9051732fa155b8940e1c71/4.4/Dockerfile)
--	[`5.0.21`, `5.0`, `5`, `latest`](https://github.com/emqx/emqx-docker/blob/8bda3215370c60fdefd197e2d033ed0bc12a2ade/5.0/Dockerfile)
+-	[`4.4.18`, `4.4`, `4`](https://github.com/emqx/emqx-docker/blob/129bff4ea692ede8157aa3165a8c278bf982f47d/4.4/Dockerfile)
+-	[`5.0.24`, `5.0`, `5`, `latest`](https://github.com/emqx/emqx-docker/blob/7585bcd6f772834c6bdd4a94be9ee4e71c9d4772/5.0/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/emqx/emqx-docker/issues](https://github.com/emqx/emqx-docker/issues)
+	[https://github.com/emqx/emqx-docker/issues](https://github.com/emqx/emqx-docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/emqx/), [`arm64v8`](https://hub.docker.com/r/arm64v8/emqx/)

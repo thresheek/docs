@@ -24,14 +24,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.0`, `5.0-20230403`, `5.0-RC`](https://github.com/vmware/photon-docker-image/blob/bc4e559a267c942b5db512a3fde6c3592a802a98/docker/Dockerfile)
--	[`4.0`, `4.0-20230408`, `latest`](https://github.com/vmware/photon-docker-image/blob/f69dcdb65365829cf67af006a020ed7ef7d6316e/docker/Dockerfile)
+-	[`5.0`, `5.0-20230508`, `latest`](https://github.com/vmware/photon-docker-image/blob/632a31370122286585265e8f90f8d01abf6b48f8/docker/Dockerfile)
+-	[`4.0`, `4.0-20230506`](https://github.com/vmware/photon-docker-image/blob/4a20654b07e42375415fdf6a1c6cf863059f9bfb/docker/Dockerfile)
 -	[`3.0`, `3.0-20230408`](https://github.com/vmware/photon-docker-image/blob/b7616914fd9dd6584a91df971767d6e5e93de55d/docker/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/vmware/photon-docker-image/issues](https://github.com/vmware/photon-docker-image/issues)
+	[https://github.com/vmware/photon-docker-image/issues](https://github.com/vmware/photon-docker-image/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/photon/), [`arm64v8`](https://hub.docker.com/r/arm64v8/photon/)

@@ -24,14 +24,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`5.2.6`, `5.2`, `latest`](https://github.com/crate/docker-crate/blob/8a7ad52cc562a2072a1817b58236ea7d8f176deb/Dockerfile)
--	[`5.1.4`, `5.1`](https://github.com/crate/docker-crate/blob/b946d9e2cdb90575f58003f3230ff705c44ffcba/Dockerfile)
+-	[`5.3.1`, `5.3`, `latest`](https://github.com/crate/docker-crate/blob/7b386ec1fc97ff17205fe10e145604de5fb758ed/Dockerfile)
+-	[`5.2.7`, `5.2`](https://github.com/crate/docker-crate/blob/5916109687edafe95199906be6e100e1b0b99588/Dockerfile)
 -	[`4.8.4`, `4.8`](https://github.com/crate/docker-crate/blob/1389b454dc1478efcbde8f9846bdd8ac6f7f0f8a/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/crate/docker-crate/issues](https://github.com/crate/docker-crate/issues)
+	[https://github.com/crate/docker-crate/issues](https://github.com/crate/docker-crate/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/crate/), [`arm64v8`](https://hub.docker.com/r/arm64v8/crate/)

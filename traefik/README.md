@@ -26,18 +26,13 @@ WARNING:
 
 -	[`v3.0.0-beta2-windowsservercore-1809`, `3.0.0-beta2-windowsservercore-1809`, `v3.0-windowsservercore-1809`, `3.0-windowsservercore-1809`, `beaufort-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/e2fc89bcccd185a9e332deae22a71e209aca1fb3/windows/1809/Dockerfile)
 -	[`v3.0.0-beta2`, `3.0.0-beta2`, `v3.0`, `3.0`, `beaufort`](https://github.com/traefik/traefik-library-image/blob/e2fc89bcccd185a9e332deae22a71e209aca1fb3/alpine/Dockerfile)
--	[`v2.9.10-windowsservercore-1809`, `2.9.10-windowsservercore-1809`, `v2.9-windowsservercore-1809`, `2.9-windowsservercore-1809`, `banon-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/a74a21441e1185fc0ff9e4139524544e54db1226/windows/1809/Dockerfile)
--	[`v2.9.10`, `2.9.10`, `v2.9`, `2.9`, `banon`, `latest`](https://github.com/traefik/traefik-library-image/blob/a74a21441e1185fc0ff9e4139524544e54db1226/alpine/Dockerfile)
--	[`v2.10.0-rc2-windowsservercore-1809`, `2.10.0-rc2-windowsservercore-1809`, `v2.10-windowsservercore-1809`, `2.10-windowsservercore-1809`, `saintmarcelin-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/2e2af4d37b83c23a252154454fb25a8c9e48b801/windows/1809/Dockerfile)
--	[`v2.10.0-rc2`, `2.10.0-rc2`, `v2.10`, `2.10`, `saintmarcelin`](https://github.com/traefik/traefik-library-image/blob/2e2af4d37b83c23a252154454fb25a8c9e48b801/alpine/Dockerfile)
--	[`v1.7.34-windowsservercore-1809`, `1.7.34-windowsservercore-1809`, `v1.7-windowsservercore-1809`, `1.7-windowsservercore-1809`, `maroilles-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/windows/1809/Dockerfile)
--	[`v1.7.34-alpine`, `1.7.34-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/alpine/Dockerfile)
--	[`v1.7.34`, `1.7.34`, `v1.7`, `1.7`, `maroilles`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/scratch/Dockerfile)
+-	[`v2.10.1-windowsservercore-1809`, `2.10.1-windowsservercore-1809`, `v2.10-windowsservercore-1809`, `2.10-windowsservercore-1809`, `saintmarcelin-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/0f5f057e1310e073297e1ed93ba6db65e0abcfef/windows/1809/Dockerfile)
+-	[`v2.10.1`, `2.10.1`, `v2.10`, `2.10`, `saintmarcelin`, `latest`](https://github.com/traefik/traefik-library-image/blob/0f5f057e1310e073297e1ed93ba6db65e0abcfef/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/traefik/traefik-library-image/issues](https://github.com/traefik/traefik-library-image/issues)
+	[https://github.com/traefik/traefik-library-image/issues](https://github.com/traefik/traefik-library-image/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/), [`s390x`](https://hub.docker.com/r/s390x/traefik/), [`windows-amd64`](https://hub.docker.com/r/winamd64/traefik/)

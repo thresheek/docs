@@ -24,12 +24,12 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.1.0`, `8.1`, `latest`](https://github.com/convertigo/convertigo/blob/070f8a67e61a7a9bc701ddadae0a0a0fba9470a3/docker/default/Dockerfile)
+-	[`8.2.0`, `8.2`, `latest`](https://github.com/convertigo/convertigo/blob/a2fb2dabcd979887118458aba535ff467d7f891d/docker/default/Dockerfile)
 
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/convertigo/docker/issues](https://github.com/convertigo/docker/issues)
+	[https://github.com/convertigo/docker/issues](https://github.com/convertigo/docker/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/convertigo/)

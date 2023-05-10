@@ -33,6 +33,7 @@ WARNING:
 -	[`1.13.4`, `1.13`](https://github.com/erlef/docker-elixir/blob/328f4c09d39b06502a90fa0c5bb30d6972593fac/1.13/Dockerfile)
 -	[`1.13.4-slim`, `1.13-slim`](https://github.com/erlef/docker-elixir/blob/328f4c09d39b06502a90fa0c5bb30d6972593fac/1.13/slim/Dockerfile)
 -	[`1.13.4-alpine`, `1.13-alpine`](https://github.com/erlef/docker-elixir/blob/328f4c09d39b06502a90fa0c5bb30d6972593fac/1.13/alpine/Dockerfile)
+-	[`1.13.4-otp-23-slim`, `1.13-otp-23-slim`](https://github.com/erlef/docker-elixir/blob/2bc3fd2b7218d6958c766c42b86e259949b56b95/1.13/otp-23-slim/Dockerfile)
 -	[`1.13.4-otp-25`, `1.13-otp-25`](https://github.com/erlef/docker-elixir/blob/253f56764ed34d41e4279cb741d84dcb4b284a55/1.13/otp-25/Dockerfile)
 -	[`1.13.4-otp-25-alpine`, `1.13-otp-25-alpine`](https://github.com/erlef/docker-elixir/blob/253f56764ed34d41e4279cb741d84dcb4b284a55/1.13/otp-25-alpine/Dockerfile)
 -	[`1.13.4-otp-25-slim`, `1.13-otp-25-slim`](https://github.com/erlef/docker-elixir/blob/253f56764ed34d41e4279cb741d84dcb4b284a55/1.13/otp-25-slim/Dockerfile)
@@ -58,7 +59,7 @@ WARNING:
 # Quick reference (cont.)
 
 -	**Where to file issues**:  
-	[https://github.com/erlef/docker-elixir/issues](https://github.com/erlef/docker-elixir/issues)
+	[https://github.com/erlef/docker-elixir/issues](https://github.com/erlef/docker-elixir/issues?q=)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
 	[`amd64`](https://hub.docker.com/r/amd64/elixir/), [`arm32v7`](https://hub.docker.com/r/arm32v7/elixir/), [`arm64v8`](https://hub.docker.com/r/arm64v8/elixir/), [`i386`](https://hub.docker.com/r/i386/elixir/), [`ppc64le`](https://hub.docker.com/r/ppc64le/elixir/), [`s390x`](https://hub.docker.com/r/s390x/elixir/)
